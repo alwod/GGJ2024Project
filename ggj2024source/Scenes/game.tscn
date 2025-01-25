@@ -37,6 +37,8 @@ texture = ExtResource("3_1xmsv")
 
 [node name="Floor" type="Area2D" parent="Background"]
 position = Vector2(0, 5392)
+collision_layer = 7
+collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Floor"]
 shape = SubResource("WorldBoundaryShape2D_320r3")
@@ -51,7 +53,7 @@ move_speed = 50000
 jump_potential = 4000
 
 [node name="Fish" parent="Players" groups=["bubbleable"] instance=ExtResource("7_3380c")]
-position = Vector2(382, 1222)
+position = Vector2(382, 1190)
 scale = Vector2(4.429, 4.36)
 force_out_of_water = 15
 
@@ -75,14 +77,78 @@ position = Vector2(-843, 2608)
 [node name="Wall2" parent="Walls" instance=ExtResource("10_xsesx")]
 position = Vector2(1196, 2608)
 
+[node name="Wall3" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(9260, -1104)
+scale = Vector2(2.16, 2.16)
+
+[node name="Wall4" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(9260, 1882)
+scale = Vector2(2.16, 2.16)
+
+[node name="Wall5" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(9260, 6340)
+scale = Vector2(2.16, 2.16)
+
+[node name="Wall6" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(17499, 2025)
+scale = Vector2(2.16, 2.16)
+
+[node name="Wall7" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(17499, 5108)
+scale = Vector2(2.16, 2.16)
+
 [node name="Objects" type="Node" parent="."]
 
 [node name="Drain" parent="Objects" instance=ExtResource("11_5hehr")]
-position = Vector2(11657, 3675)
+position = Vector2(21399, 3504)
 scale = Vector2(10.47, 10.47)
 
 [node name="FloatingObject" parent="Objects" instance=ExtResource("2_70nj0")]
-position = Vector2(882, -2252)
+position = Vector2(1448, 4869)
+mass = 8.0
+
+[node name="FloatingObject2" parent="Objects" instance=ExtResource("2_70nj0")]
+position = Vector2(12256, 4772)
+mass = 8.0
+
+[node name="FloatingObject3" parent="Objects" instance=ExtResource("2_70nj0")]
+position = Vector2(11035, 4179)
+mass = 8.0
+
+[node name="FloatingObject4" parent="Objects" instance=ExtResource("2_70nj0")]
+position = Vector2(12188, 3637)
+mass = 8.0
+
+[node name="FloatingObject5" parent="Objects" instance=ExtResource("2_70nj0")]
+position = Vector2(12205, 2450)
+mass = 8.0
+
+[node name="FloatingObject6" parent="Objects" instance=ExtResource("2_70nj0")]
+position = Vector2(12103, 1229)
+mass = 8.0
+
+[node name="FloatingObject7" parent="Objects" instance=ExtResource("2_70nj0")]
+position = Vector2(12273, 42)
+mass = 8.0
+
+[node name="FloatingObject8" parent="Objects" instance=ExtResource("2_70nj0")]
+position = Vector2(13460, 1161)
+mass = 8.0
+
+[node name="FloatingObject9" parent="Objects" instance=ExtResource("2_70nj0")]
+position = Vector2(13460, 2534)
+mass = 8.0
+
+[node name="FloatingObject10" parent="Objects" instance=ExtResource("2_70nj0")]
+position = Vector2(13443, 3907)
+mass = 8.0
+
+[node name="FloatingObject11" parent="Objects" instance=ExtResource("2_70nj0")]
+position = Vector2(13511, 5111)
+mass = 8.0
+
+[node name="FloatingObject12" parent="Objects" instance=ExtResource("2_70nj0")]
+position = Vector2(13511, 5111)
 mass = 8.0
 
 [node name="BubbleSpawner" parent="Objects" instance=ExtResource("4_snigy")]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpc0dvpgb0of5"]
+
+[ext_resource type="Script" path="res://Scripts/Floating/floatable_body_2d.gd" id="1_5ci6g"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_v0vdb"]
+
+[node name="FloatingDiagonal" type="RigidBody2D"]
+mass = 8.0
+script = ExtResource("1_5ci6g")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-2021, 465)
+scale = Vector2(3.09247, 3.09247)
+polygon = PackedVector2Array(0, 0, 1000, 0, 1000, -500)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.992385, 0.99228, 0.99275, 1)
+position = Vector2(-410, -180)
+rotation = -0.465461
+scale = Vector2(3469.66, 280.378)
+texture = SubResource("PlaceholderTexture2D_v0vdb")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0.992385, 0.99228, 0.99275, 1)
+position = Vector2(-5, 389)
+scale = Vector2(2145.71, -149.497)
+texture = SubResource("PlaceholderTexture2D_v0vdb")

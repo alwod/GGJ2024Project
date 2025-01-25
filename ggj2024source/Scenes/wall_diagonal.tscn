@@ -5,7 +5,7 @@ points = PackedVector2Array(0, 0, 0, 1000, 500, 1000)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8q2ek"]
 
-[node name="Wall" type="StaticBody2D"]
+[node name="WallDiagonal" type="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 modulate = Color(0.992157, 0.988235, 0.980392, 1)
