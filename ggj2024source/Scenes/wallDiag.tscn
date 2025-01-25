@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgi4oau5v5gne"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_uarg1"]
+points = PackedVector2Array(0, 0, 0, 1000, 500, 1000)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8q2ek"]
+
+[node name="Wall" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+modulate = Color(0.992157, 0.988235, 0.980392, 1)
+position = Vector2(-652, 102)
+rotation = -1.5708
+shape = SubResource("ConvexPolygonShape2D_uarg1")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.992385, 0.99228, 0.99275, 1)
+position = Vector2(-129.69, -110.358)
+rotation = -0.465461
+scale = Vector2(1111.16, 89.8037)
+texture = SubResource("PlaceholderTexture2D_8q2ek")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0.992385, 0.99228, 0.99275, 1)
+position = Vector2(-46.5, 57)
+scale = Vector2(791, 89.8037)
+texture = SubResource("PlaceholderTexture2D_8q2ek")
