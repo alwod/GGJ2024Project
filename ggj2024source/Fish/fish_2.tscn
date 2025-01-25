@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://dprtvh6v4tbjh"]
 
-[ext_resource type="Script" path="res://Fish/fish_character_body_2d.gd" id="1_dcabu"]
+[ext_resource type="Script" path="res://Fish/fish_movement_2.gd" id="1_sviwx"]
 [ext_resource type="Texture2D" uid="uid://clw4ja44vxod1" path="res://icon.svg" id="2_58j56"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htts3"]
 size = Vector2(110.93, 124.6)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
-script = ExtResource("1_dcabu")
+[node name="Fish" type="CharacterBody2D"]
+script = ExtResource("1_sviwx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 0)
