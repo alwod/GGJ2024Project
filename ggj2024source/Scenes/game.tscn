@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b5yh1n0snkwwh"]
+[gd_scene load_steps=11 format=3 uid="uid://b5yh1n0snkwwh"]
 
 [ext_resource type="Texture2D" uid="uid://6kr8qntjkxsn" path="res://Art/bath.png" id="1_642da"]
 [ext_resource type="Texture2D" uid="uid://dmhuiln1x2pul" path="res://Art/bathroom/wall.png" id="1_cnihc"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/duck_boundary.tscn" id="4_k5c8s"]
 [ext_resource type="PackedScene" path="res://Scenes/bubble_spawner.tscn" id="4_snigy"]
 [ext_resource type="PackedScene" uid="uid://dprtvh6v4tbjh" path="res://Fish/fish.tscn" id="7_3380c"]
+[ext_resource type="PackedScene" uid="uid://cabst7tdp5e85" path="res://Drain/drain.tscn" id="10_4qsao"]
 
 [node name="Game" type="Node2D"]
 
@@ -26,6 +27,10 @@ texture = ExtResource("1_642da")
 position = Vector2(10314, 928)
 scale = Vector2(8.15967, 5.58)
 texture = ExtResource("3_1xmsv")
+
+[node name="Drain" parent="." instance=ExtResource("10_4qsao")]
+position = Vector2(2779, 5000)
+scale = Vector2(12.94, 12.94)
 
 [node name="Water" parent="." instance=ExtResource("1_fb3qe")]
 position = Vector2(-1881, -314)
