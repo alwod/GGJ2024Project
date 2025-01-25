@@ -13,9 +13,10 @@ func gen_random_pos():
 
 func spawn_bubble():
 	var bubbleNode = bubble.instantiate()
-	bubbleNode.position = gen_random_pos()
-	bubbleNode.set_bubble_settings(rng.randf_range(10, 16), rng.randf_range(3, 6))
+	bubbleNode.global_position = gen_random_pos()
+	bubbleNode.set_bubble_settings(rng.randf_range(10, 16), rng.randf_range(6, 10))
 	add_child(bubbleNode)
 	
 func _on_timer_timeout():
+	print("bubble spawned")
 	spawn_bubble()

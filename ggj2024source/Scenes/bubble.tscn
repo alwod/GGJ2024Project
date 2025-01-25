@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://da665mvxbbsr6" path="res://Art/bubble/Bubble_5.png" id="6_c0gmw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pif5m"]
-radius = 19.3064
+radius = 60.7727
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v4gr4"]
 animations = [{
@@ -47,7 +47,7 @@ autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-4.76837e-07, 0)
-scale = Vector2(0.403245, 0.403245)
+scale = Vector2(1.56324, 1.56324)
 sprite_frames = SubResource("SpriteFrames_v4gr4")
 autoplay = "default"
 frame_progress = 0.0147856

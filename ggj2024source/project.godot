@@ -23,6 +23,10 @@ buses/default_bus_layout="res://Audio/default_bus_layout.tres"
 
 project/assembly_name="GGJ2024Source"
 
+[global_group]
+
+bubble_destoyer=""
+
 [input]
 
 fish_move_up={

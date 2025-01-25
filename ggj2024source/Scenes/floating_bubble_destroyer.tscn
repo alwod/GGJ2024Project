@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cskj4ymaj7c0l"]
+
+[ext_resource type="Script" path="res://Scripts/Floating/floatable_body_2d.gd" id="1_8alpo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6gun"]
+size = Vector2(6035, 1902.5)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sg61p"]
+
+[node name="FloatingBubbleDestoyer" type="RigidBody2D" groups=["bubble_destoyer"]]
+script = ExtResource("1_8alpo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.69092, -2.9205)
+shape = SubResource("RectangleShape2D_x6gun")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.991392, 0.374572, 0.545636, 1)
+position = Vector2(11.0957, 32.1648)
+scale = Vector2(6052.19, 1964.33)
+texture = SubResource("PlaceholderTexture2D_sg61p")
