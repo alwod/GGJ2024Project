@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://6kr8qntjkxsn" path="res://Art/bath.png" id="1_642da"]
 [ext_resource type="PackedScene" uid="uid://bpr51htjut4js" path="res://Scenes/water.tscn" id="1_fb3qe"]
 [ext_resource type="PackedScene" uid="uid://u2or4d8medwc" path="res://Scenes/floating_object.tscn" id="2_70nj0"]
-[ext_resource type="PackedScene" path="res://Scenes/duck.tscn" id="3_lo5nj"]
+[ext_resource type="PackedScene" uid="uid://b5spf2dn1ciu7" path="res://Scenes/duck.tscn" id="3_lo5nj"]
 [ext_resource type="PackedScene" uid="uid://jhfg7xuqtwje" path="res://Scenes/duck_boundary.tscn" id="4_k5c8s"]
-[ext_resource type="PackedScene" uid="uid://dt0h6dhdphaqe" path="res://Scenes/bubble_spawner.tscn" id="4_snigy"]
+[ext_resource type="PackedScene" path="res://Scenes/bubble_spawner.tscn" id="4_snigy"]
 
 [node name="Game" type="Node2D"]
 
@@ -24,6 +24,11 @@ zoom = Vector2(0.1, 0.1)
 
 [node name="Duck" parent="." groups=["bubbleable"] instance=ExtResource("3_lo5nj")]
 position = Vector2(-834, -593)
+mass = 0.7
+freeze_mode = 1
+move_speed = null
+jump_potential = 50
+jump_time = null
 
 [node name="DuckBoundary" parent="." instance=ExtResource("4_k5c8s")]
 position = Vector2(629, -27)
