@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5yh1n0snkwwh"]
+
+[ext_resource type="Texture2D" uid="uid://6kr8qntjkxsn" path="res://Art/bath.png" id="1_642da"]
+[ext_resource type="PackedScene" uid="uid://bpr51htjut4js" path="res://Scenes/water.tscn" id="1_fb3qe"]
+[ext_resource type="PackedScene" uid="uid://u2or4d8medwc" path="res://Scenes/floating_object.tscn" id="2_70nj0"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(571, 92)
+scale = Vector2(2.06875, 2.27187)
+texture = ExtResource("1_642da")
+
+[node name="FloatingObject" parent="." instance=ExtResource("2_70nj0")]
+position = Vector2(728, -301)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(607, -98)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Water" parent="." instance=ExtResource("1_fb3qe")]
+position = Vector2(-485, -110)
+scale = Vector2(1.72, 1)
