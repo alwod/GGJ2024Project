@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 
 var is_plug_open = false
 var should_move = true
@@ -16,11 +16,13 @@ func _process(delta: float) -> void:
 		position.y -= rising_speed
 		if position.y == rise_to_level:
 			should_move = false
-	
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_plug_body_entered(body: Node2D) -> void:
+	if body.is_in_group("fish") && is_plug_open:
+		# Should replace with a change to main menu scene once it's implemented
+		get_tree().quit()
+
+
+func _on_chain_body_entered(body: Node2D) -> void:
 	if body.is_in_group("duck"):
 		is_plug_open = true
-	
-	if(body.is_in_group("fish")) && is_plug_open:
-		get_tree().quit()
