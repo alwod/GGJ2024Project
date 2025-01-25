@@ -1,18 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2bg1mrdklivf"]
+[gd_scene load_steps=9 format=3 uid="uid://pi65gxobmntb"]
 
-[ext_resource type="Texture2D" uid="uid://wjah3h2vmast" path="res://Art/bubble.webp" id="1_4jpb3"]
 [ext_resource type="Script" path="res://Scripts/bubble.gd" id="1_fvtdo"]
+[ext_resource type="Texture2D" uid="uid://b7ru6o6dh5lab" path="res://Art/bubble/Bubble_1.png" id="2_fmekq"]
+[ext_resource type="Texture2D" uid="uid://c16f8spe0wosc" path="res://Art/bubble/Bubble_2.png" id="3_a8xo5"]
+[ext_resource type="Texture2D" uid="uid://bcsxjefau66ro" path="res://Art/bubble/Bubble_3.png" id="4_fppx2"]
+[ext_resource type="Texture2D" uid="uid://bsuoj6ubmidq8" path="res://Art/bubble/Bubble_4.png" id="5_nxhra"]
+[ext_resource type="Texture2D" uid="uid://da665mvxbbsr6" path="res://Art/bubble/Bubble_5.png" id="6_c0gmw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pif5m"]
 radius = 19.3064
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_v4gr4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fmekq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_a8xo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fppx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nxhra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_c0gmw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
 [node name="Bubble" type="Area2D"]
 modulate = Color(1, 1, 1, 0.490196)
 script = ExtResource("1_fvtdo")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.636459, 0.635)
-texture = ExtResource("1_4jpb3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(3.16, 3.16)
@@ -21,6 +44,13 @@ shape = SubResource("CircleShape2D_pif5m")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
 autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4.76837e-07, 0)
+scale = Vector2(0.403245, 0.403245)
+sprite_frames = SubResource("SpriteFrames_v4gr4")
+autoplay = "default"
+frame_progress = 0.837905
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="ready" from="Timer" to="." method="_on_timer_ready"]
