@@ -12,9 +12,16 @@ func get_input():
 	input = Input.get_vector("fish_move_left", "fish_move_right", "fish_move_up", "fish_move_down")
 	return input.normalized()
 
+func flip_fish():
+	if Input.is_action_just_pressed("fish_move_right"):
+		$AnimatedSprite2D.flip_h = true;
+	if Input.is_action_just_pressed("fish_move_left"):
+		$AnimatedSprite2D.flip_h = false;
+		
+
 func player_movement(delta):
 	input = get_input()
-	
+	flip_fish()
 	if input == Vector2.ZERO:
 		if velocity.length() > (friction * delta):
 			velocity -= velocity.normalized() * (friction * delta)

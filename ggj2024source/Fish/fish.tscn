@@ -19,6 +19,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_c6uwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_driry")
 }],
 "loop": true,
 "name": &"move",
@@ -37,5 +40,5 @@ position = Vector2(2, 2.5)
 scale = Vector2(0.132114, 0.171875)
 sprite_frames = SubResource("SpriteFrames_8r0h1")
 animation = &"move"
-frame = 2
-frame_progress = 0.61595
+autoplay = "move"
+frame_progress = 0.136683

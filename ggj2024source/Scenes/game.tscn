@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://6kr8qntjkxsn" path="res://Art/bath.png" id="1_642da"]
 [ext_resource type="PackedScene" uid="uid://bpr51htjut4js" path="res://Scenes/water.tscn" id="1_fb3qe"]
 [ext_resource type="PackedScene" uid="uid://u2or4d8medwc" path="res://Scenes/floating_object.tscn" id="2_70nj0"]
-[ext_resource type="PackedScene" uid="uid://dprtvh6v4tbjh" path="res://Fish/fish_2.tscn" id="4_4jfms"]
+[ext_resource type="PackedScene" uid="uid://dprtvh6v4tbjh" path="res://Fish/fish.tscn" id="4_4jfms"]
 
 [node name="Game" type="Node2D"]
 
