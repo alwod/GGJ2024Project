@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dthvl0qd4f4jg"]
+
+[ext_resource type="PackedScene" uid="uid://dprtvh6v4tbjh" path="res://Fish/fish_2.tscn" id="1_q8dnj"]
+
+[node name="Main" type="Node"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_q8dnj")]
+speed = 300
