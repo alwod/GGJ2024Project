@@ -18,8 +18,7 @@ func _process(delta):
 	# Stops the camera from zooming out too much. 
 	# Change the first vector with smaller numbers to increase max zoom-out range.
 	# Don't recommend going higher than 0.09
-	zoom = zoom.clamp(Vector2(0.08, 0.08), Vector2(1, 1))
-	print(zoom)
+	zoom = zoom.clamp(Vector2(0.08, 0.08), Vector2(0.1, 0.1))
 	
 	# Finds the vector that is halfway between the fish and duck
 	var middle_point = u.lerp(v, 0.5)

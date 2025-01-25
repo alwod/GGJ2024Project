@@ -50,7 +50,7 @@ position = Vector2(-4.76837e-07, 0)
 scale = Vector2(0.403245, 0.403245)
 sprite_frames = SubResource("SpriteFrames_v4gr4")
 autoplay = "default"
-frame_progress = 0.837905
+frame_progress = 0.0147856
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="ready" from="Timer" to="." method="_on_timer_ready"]
