@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5yh1n0snkwwh"]
+[gd_scene load_steps=6 format=3 uid="uid://b5yh1n0snkwwh"]
 
 [ext_resource type="Texture2D" uid="uid://6kr8qntjkxsn" path="res://Art/bath.png" id="1_642da"]
 [ext_resource type="PackedScene" uid="uid://bpr51htjut4js" path="res://Scenes/water.tscn" id="1_fb3qe"]
 [ext_resource type="PackedScene" uid="uid://u2or4d8medwc" path="res://Scenes/floating_object.tscn" id="2_70nj0"]
+[ext_resource type="PackedScene" uid="uid://b5spf2dn1ciu7" path="res://Scenes/duck.tscn" id="4_0l0wm"]
+[ext_resource type="PackedScene" uid="uid://7s2x7878ifyn" path="res://Scenes/duck_boundary.tscn" id="5_s8jup"]
 
 [node name="Game" type="Node2D"]
 
@@ -21,3 +23,9 @@ zoom = Vector2(0.5, 0.5)
 [node name="Water" parent="." instance=ExtResource("1_fb3qe")]
 position = Vector2(-485, -110)
 scale = Vector2(1.72, 1)
+
+[node name="Duck" parent="." instance=ExtResource("4_0l0wm")]
+position = Vector2(130, -374)
+scale = Vector2(0.158849, 0.28)
+
+[node name="DuckBoundary" parent="." instance=ExtResource("5_s8jup")]
