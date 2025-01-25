@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://dprtvh6v4tbjh"]
+
+[ext_resource type="Script" path="res://Fish/fish_movement_2.gd" id="1_sviwx"]
+[ext_resource type="Texture2D" uid="uid://th6o5mgvs5ca" path="res://Fish/Bill_1.png" id="2_uov6w"]
+[ext_resource type="Texture2D" uid="uid://bcp1x3cjmvqqq" path="res://Fish/Bill_2.png" id="3_driry"]
+[ext_resource type="Texture2D" uid="uid://dim016hbyq1c1" path="res://Fish/Bill_3.png" id="4_c6uwm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htts3"]
+size = Vector2(110.93, 124.6)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8r0h1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_uov6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_driry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_c6uwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_driry")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
+[node name="Fish" type="CharacterBody2D" groups=["fish"]]
+script = ExtResource("1_sviwx")
+max_speed = 1200
+acceleration = 4500
+friction = 200
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_htts3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, 2.5)
+scale = Vector2(0.132114, 0.171875)
+sprite_frames = SubResource("SpriteFrames_8r0h1")
+animation = &"move"
+autoplay = "move"
+frame_progress = 0.136683
