@@ -14,16 +14,16 @@ func _on_body_entered(body):
 		hasCaptured = true;
 		bodyCaptured = body
 
-		if body.name == "Duck":
-			var duck: Duck = body
-			duck.set_freeze_enabled(true);
-			duck.set_physics_process(false)
-			duck.set_process(false)
+		if body is RigidBody2D:
+			var rigid_body: RigidBody2D = body
+			rigid_body.set_freeze_enabled(true);
+			rigid_body.set_physics_process(false)
+			rigid_body.set_process(false)
 	
 func _physics_process(delta):
 	position.y -= float_speed
 	if (hasCaptured):
-		if bodyCaptured.name == "Duck":
+		if bodyCaptured is RigidBody2D:
 			PhysicsServer2D.body_set_state(
  				bodyCaptured.get_rid(),
 				PhysicsServer2D.BODY_STATE_TRANSFORM,
@@ -37,10 +37,10 @@ func float_upwards():
 
 
 func _on_timer_timeout():
-	if bodyCaptured && bodyCaptured.name == "Duck":
-		var duck: Duck = get_node("/root/Game/Duck")
-		duck.set_freeze_enabled(false)
-		duck.set_physics_process(true)
-		duck.set_process(true)
+	if bodyCaptured && bodyCaptured is RigidBody2D:
+		var rigid_body: RigidBody2D = bodyCaptured
+		rigid_body.set_freeze_enabled(false)
+		rigid_body.set_physics_process(true)
+		rigid_body.set_process(true)
 
 	queue_free()
