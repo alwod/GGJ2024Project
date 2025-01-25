@@ -4,9 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bpr51htjut4js" path="res://Scenes/water.tscn" id="1_fb3qe"]
 [ext_resource type="PackedScene" uid="uid://u2or4d8medwc" path="res://Scenes/floating_object.tscn" id="2_70nj0"]
 [ext_resource type="PackedScene" uid="uid://b5spf2dn1ciu7" path="res://Scenes/duck.tscn" id="4_0l0wm"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5gnr"]
-size = Vector2(2066, 73)
+[ext_resource type="PackedScene" uid="uid://7s2x7878ifyn" path="res://Scenes/duck_boundary.tscn" id="5_s8jup"]
 
 [node name="Game" type="Node2D"]
 
@@ -30,10 +28,4 @@ scale = Vector2(1.72, 1)
 position = Vector2(130, -374)
 scale = Vector2(0.158849, 0.28)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(560, -78)
-collision_layer = 2
-collision_mask = 2
-
-[node name="DuckBoundary" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_u5gnr")
+[node name="DuckBoundary" parent="." instance=ExtResource("5_s8jup")]
