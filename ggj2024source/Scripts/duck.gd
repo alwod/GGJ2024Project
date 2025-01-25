@@ -12,11 +12,17 @@ func _ready():
 
 func _process(_delta):
 	var force := Vector2(0, 0)
+	var can_flip := false
 
 	if Input.is_action_pressed("duck_move_left"):
 		force.x -= move_speed
+		can_flip = true
 	elif Input.is_action_pressed("duck_move_right"):
 		force.x += move_speed
+		can_flip = true
+
+	if !freeze && can_flip:
+		$AnimatedSprite2D.flip_h = force.x < 0
 
 	var time_since_last_jump := Time.get_ticks_msec() - last_jump_time
 
