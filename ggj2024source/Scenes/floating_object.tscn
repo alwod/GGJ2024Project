@@ -7,7 +7,7 @@ size = Vector2(169, 150)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sg61p"]
 
-[node name="FloatingObject" type="RigidBody2D"]
+[node name="FloatingObject" type="RigidBody2D" groups=["bubbleable"]]
 script = ExtResource("1_7e258")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
