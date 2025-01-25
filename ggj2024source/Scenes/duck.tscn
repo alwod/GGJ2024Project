@@ -1,10 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5spf2dn1ciu7"]
+[gd_scene load_steps=10 format=3 uid="uid://b5spf2dn1ciu7"]
 
 [ext_resource type="Script" path="res://Scripts/duck.gd" id="1_qokuw"]
-[ext_resource type="Texture2D" uid="uid://c8pf63qnshpw" path="res://Art/duck.png" id="2_4lo1n"]
+[ext_resource type="Texture2D" uid="uid://cghamlyk4iobk" path="res://Art/duck/Bub_1.png" id="2_nq0mo"]
+[ext_resource type="Texture2D" uid="uid://cq6ma6smr5v3c" path="res://Art/duck/Bub_2.png" id="3_bls10"]
+[ext_resource type="Texture2D" uid="uid://bodev07pqady" path="res://Art/duck/Bub_3.png" id="4_mgmts"]
+[ext_resource type="Texture2D" uid="uid://byx7bxxiq8bry" path="res://Art/duck/Bub_4.png" id="5_gkwb8"]
+[ext_resource type="Texture2D" uid="uid://hoks3nou1rba" path="res://Art/duck/Bub_5.png" id="6_jn8w6"]
+[ext_resource type="Texture2D" uid="uid://chn8d1xaasqte" path="res://Art/duck/Bub_6.png" id="7_hjmgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_86elp"]
-size = Vector2(28.0244, 27.0198)
+size = Vector2(14.5304, 36.6181)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_006kl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nq0mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bls10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mgmts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gkwb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jn8w6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hjmgy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Duck" type="RigidBody2D"]
 collision_layer = 3
@@ -12,13 +43,14 @@ collision_mask = 3
 mass = 0.2
 script = ExtResource("1_qokuw")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(14, 0)
-scale = Vector2(0.4, 0.64)
-texture = ExtResource("2_4lo1n")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-12, 18)
+position = Vector2(-46, -59)
 rotation = 3.14159
 scale = Vector2(40.4666, 18.6793)
 shape = SubResource("RectangleShape2D_86elp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_006kl")
+autoplay = "default"
+frame = 2
+frame_progress = 0.52133
