@@ -1,5 +1,5 @@
-
 [gd_scene load_steps=7 format=3 uid="uid://b5yh1n0snkwwh"]
+
 [ext_resource type="Texture2D" uid="uid://6kr8qntjkxsn" path="res://Art/bath.png" id="1_642da"]
 [ext_resource type="PackedScene" uid="uid://bpr51htjut4js" path="res://Scenes/water.tscn" id="1_fb3qe"]
 [ext_resource type="PackedScene" uid="uid://u2or4d8medwc" path="res://Scenes/floating_object.tscn" id="2_70nj0"]
@@ -26,9 +26,7 @@ zoom = Vector2(0.1, 0.1)
 position = Vector2(-834, -593)
 mass = 0.7
 freeze_mode = 1
-move_speed = null
 jump_potential = 50
-jump_time = null
 
 [node name="DuckBoundary" parent="." instance=ExtResource("4_k5c8s")]
 position = Vector2(629, -27)
@@ -39,6 +37,5 @@ position = Vector2(2952, 881)
 scale = Vector2(2.44, 2.44)
 
 [node name="Water" parent="." instance=ExtResource("1_fb3qe")]
-
 position = Vector2(-1388, -153)
 scale = Vector2(8.35595, 4.40239)
