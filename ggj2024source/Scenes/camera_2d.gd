@@ -15,7 +15,10 @@ func _process(delta):
 	var v = duck.position
 	var result = similarity_fraction(u, v)	
 	zoom = Vector2(result, result)
-	#zoom = clamp(Vector2(-1, -1), Vector2(result, result), Vector2(0.01, 0.01))
+	# Stops the camera from zooming out too much. 
+	# Change the first vector with smaller numbers to increase max zoom-out range.
+	# Don't recommend going higher than 0.09
+	zoom = zoom.clamp(Vector2(0.08, 0.08), Vector2(1, 1))
 	print(zoom)
 
 	
