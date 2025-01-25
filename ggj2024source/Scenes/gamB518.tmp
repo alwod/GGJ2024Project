@@ -1,11 +1,11 @@
-
 [gd_scene load_steps=7 format=3 uid="uid://b5yh1n0snkwwh"]
+
 [ext_resource type="Texture2D" uid="uid://6kr8qntjkxsn" path="res://Art/bath.png" id="1_642da"]
 [ext_resource type="PackedScene" uid="uid://bpr51htjut4js" path="res://Scenes/water.tscn" id="1_fb3qe"]
 [ext_resource type="PackedScene" uid="uid://u2or4d8medwc" path="res://Scenes/floating_object.tscn" id="2_70nj0"]
 [ext_resource type="PackedScene" path="res://Scenes/duck.tscn" id="3_lo5nj"]
-[ext_resource type="PackedScene" uid="uid://jhfg7xuqtwje" path="res://Scenes/duck_boundary.tscn" id="4_k5c8s"]
-[ext_resource type="PackedScene" uid="uid://dt0h6dhdphaqe" path="res://Scenes/bubble_spawner.tscn" id="4_snigy"]
+[ext_resource type="PackedScene" path="res://Scenes/duck_boundary.tscn" id="4_k5c8s"]
+[ext_resource type="PackedScene" path="res://Scenes/bubble_spawner.tscn" id="4_snigy"]
 
 [node name="Game" type="Node2D"]
 
@@ -17,10 +17,6 @@ texture = ExtResource("1_642da")
 [node name="FloatingObject2" parent="." instance=ExtResource("2_70nj0")]
 position = Vector2(1726, 1163)
 mass = 5.0
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(3577, -537)
-zoom = Vector2(0.1, 0.1)
 
 [node name="Duck" parent="." groups=["bubbleable"] instance=ExtResource("3_lo5nj")]
 position = Vector2(-834, -593)
@@ -34,6 +30,5 @@ position = Vector2(2952, 881)
 scale = Vector2(2.44, 2.44)
 
 [node name="Water" parent="." instance=ExtResource("1_fb3qe")]
-
 position = Vector2(-1388, -153)
 scale = Vector2(8.35595, 4.40239)
