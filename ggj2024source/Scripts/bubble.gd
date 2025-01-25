@@ -16,7 +16,7 @@ func _on_body_entered(body):
 func _physics_process(delta):
 	position.y -= float_speed
 	if (hasCaptured):
-		bodyCaptured.position = position
+		bodyCaptured.position = global_position
 	
 func float_upwards():
 	pass
