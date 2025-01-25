@@ -11,5 +11,10 @@ config_version=5
 [application]
 
 config/name="GGJ2024Source"
+run/main_scene="res://Scenes/game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[dotnet]
+
+project/assembly_name="GGJ2024Source"
