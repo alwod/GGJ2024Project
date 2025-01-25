@@ -20,5 +20,9 @@ func _process(delta):
 	# Don't recommend going higher than 0.09
 	zoom = zoom.clamp(Vector2(0.08, 0.08), Vector2(1, 1))
 	print(zoom)
+	
+	# Finds the vector that is halfway between the fish and duck
+	var middle_point = u.lerp(v, 0.5)
+	global_position = middle_point
 
 	
