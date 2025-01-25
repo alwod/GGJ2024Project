@@ -30,6 +30,9 @@ animations = [{
 
 [node name="Fish" type="CharacterBody2D"]
 script = ExtResource("1_sviwx")
+max_speed = 1200
+acceleration = 4500
+friction = 200
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 0)
