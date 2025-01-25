@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b5yh1n0snkwwh"]
+[gd_scene load_steps=11 format=3 uid="uid://b5yh1n0snkwwh"]
 
 [ext_resource type="Texture2D" uid="uid://6kr8qntjkxsn" path="res://Art/bath.png" id="1_642da"]
 [ext_resource type="Texture2D" uid="uid://dmhuiln1x2pul" path="res://Art/bathroom/wall.png" id="1_cnihc"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/duck_boundary.tscn" id="4_k5c8s"]
 [ext_resource type="PackedScene" path="res://Scenes/bubble_spawner.tscn" id="4_snigy"]
 [ext_resource type="PackedScene" uid="uid://dprtvh6v4tbjh" path="res://Fish/fish.tscn" id="7_3380c"]
+[ext_resource type="PackedScene" uid="uid://d2etyhfvt5fgr" path="res://Scenes/wall.tscn" id="10_xsesx"]
 
 [node name="Game" type="Node2D"]
 
@@ -27,20 +28,37 @@ position = Vector2(10314, 928)
 scale = Vector2(8.15967, 5.58)
 texture = ExtResource("3_1xmsv")
 
-[node name="Water" parent="." instance=ExtResource("1_fb3qe")]
+[node name="Water" parent="." groups=["bubbleable"] instance=ExtResource("1_fb3qe")]
 position = Vector2(-1881, -314)
 scale = Vector2(19.4759, 10.261)
 
 [node name="FloatingObject2" parent="." instance=ExtResource("2_70nj0")]
-position = Vector2(1737, 1163)
-mass = 4.0
+position = Vector2(3162, 956)
+mass = 8.0
+fluid_damp = 100.0
+
+[node name="FloatingObject3" parent="." instance=ExtResource("2_70nj0")]
+position = Vector2(5200, -1282)
+mass = 8.0
+
+[node name="FloatingObject4" parent="." instance=ExtResource("2_70nj0")]
+position = Vector2(7260, 2481)
+mass = 8.0
+
+[node name="FloatingObject5" parent="." instance=ExtResource("2_70nj0")]
+position = Vector2(8629, -1546)
+mass = 8.0
+
+[node name="FloatingObject6" parent="." instance=ExtResource("2_70nj0")]
+position = Vector2(882, -2252)
+mass = 8.0
 
 [node name="Duck" parent="." groups=["bubbleable"] instance=ExtResource("3_lo5nj")]
-position = Vector2(-777, -775)
+position = Vector2(329, -1125)
 mass = 20.0
 freeze_mode = 1
 move_speed = 50000
-jump_potential = 1000
+jump_potential = 4000
 
 [node name="Camera2D" type="Camera2D" parent="Duck"]
 position = Vector2(1005, 136)
@@ -56,5 +74,27 @@ position = Vector2(4444, 2190)
 scale = Vector2(2.44, 2.44)
 
 [node name="Fish" parent="." instance=ExtResource("7_3380c")]
-position = Vector2(-346, 686)
+position = Vector2(382, 1222)
 scale = Vector2(4.429, 4.36)
+force_out_of_water = 15
+
+[node name="Wall2" parent="." instance=ExtResource("10_xsesx")]
+position = Vector2(-697, 2396)
+
+[node name="Wall3" parent="." instance=ExtResource("10_xsesx")]
+position = Vector2(1351, 2348)
+
+[node name="Wall4" parent="." instance=ExtResource("10_xsesx")]
+position = Vector2(2071, -244)
+
+[node name="Wall5" parent="." instance=ExtResource("10_xsesx")]
+position = Vector2(5063, -708)
+
+[node name="Wall6" parent="." instance=ExtResource("10_xsesx")]
+position = Vector2(7735, 716)
+
+[node name="Wall7" parent="." instance=ExtResource("10_xsesx")]
+position = Vector2(5511, 3836)
+
+[node name="Wall8" parent="." instance=ExtResource("10_xsesx")]
+position = Vector2(9655, 3836)

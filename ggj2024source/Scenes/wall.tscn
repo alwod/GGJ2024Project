@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2etyhfvt5fgr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ax7o"]
+size = Vector2(2021, 1441)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_l2yru"]
+
+[node name="Wall" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+modulate = Color(0.992157, 0.988235, 0.980392, 1)
+position = Vector2(6.5, 9.5)
+shape = SubResource("RectangleShape2D_7ax7o")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.992385, 0.99228, 0.99275, 1)
+position = Vector2(-2, -1.99997)
+scale = Vector2(2052, 1448)
+texture = SubResource("PlaceholderTexture2D_l2yru")

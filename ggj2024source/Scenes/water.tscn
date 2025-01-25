@@ -15,7 +15,7 @@ shape = SubResource("RectangleShape2D_oahvy")
 
 [node name="Waterback" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.478431)
-position = Vector2(610, 658)
-rotation = -3.1377
+position = Vector2(614, 637)
+rotation = -3.14159
 scale = Vector2(0.410667, 0.785)
 texture = ExtResource("2_0ht6b")
