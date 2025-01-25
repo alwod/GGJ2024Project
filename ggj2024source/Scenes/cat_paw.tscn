@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqu43qab07ej3"]
+
+[ext_resource type="Texture2D" uid="uid://bep8wf7sionlt" path="res://Art/paw/pawback.png" id="1_1pxdu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xg1rx"]
+size = Vector2(354, 267)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4j2m"]
+size = Vector2(224.74, 928.384)
+
+[node name="CatPaw" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7, 421.5)
+shape = SubResource("RectangleShape2D_xg1rx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1pxdu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-36.4728, -168.022)
+rotation = -0.0523599
+shape = SubResource("RectangleShape2D_c4j2m")
