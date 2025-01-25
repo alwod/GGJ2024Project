@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5yh1n0snkwwh"]
+[gd_scene load_steps=6 format=3 uid="uid://b5yh1n0snkwwh"]
 
 [ext_resource type="Texture2D" uid="uid://6kr8qntjkxsn" path="res://Art/bath.png" id="1_642da"]
 [ext_resource type="PackedScene" uid="uid://bpr51htjut4js" path="res://Scenes/water.tscn" id="1_fb3qe"]
 [ext_resource type="PackedScene" uid="uid://u2or4d8medwc" path="res://Scenes/floating_object.tscn" id="2_70nj0"]
 [ext_resource type="PackedScene" uid="uid://dprtvh6v4tbjh" path="res://Fish/fish.tscn" id="4_4jfms"]
+[ext_resource type="PackedScene" uid="uid://bfg66qxe017ak" path="res://Drain/drain.tscn" id="5_soq71"]
 
 [node name="Game" type="Node2D"]
 
@@ -19,8 +20,11 @@ position = Vector2(728, -301)
 position = Vector2(607, -98)
 zoom = Vector2(0.5, 0.5)
 
+[node name="Drain" parent="." instance=ExtResource("5_soq71")]
+position = Vector2(1427, 378)
+
 [node name="Water" parent="." instance=ExtResource("1_fb3qe")]
-position = Vector2(-485, -110)
+position = Vector2(-493, -105)
 scale = Vector2(1.72, 1)
 
 [node name="Fish" parent="." instance=ExtResource("4_4jfms")]

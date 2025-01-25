@@ -28,7 +28,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Fish" type="CharacterBody2D"]
+[node name="Fish" type="CharacterBody2D" groups=["fish"]]
 script = ExtResource("1_sviwx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

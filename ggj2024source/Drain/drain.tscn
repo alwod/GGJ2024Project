@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfg66qxe017ak"]
+
+[ext_resource type="Texture2D" uid="uid://clw4ja44vxod1" path="res://icon.svg" id="1_1mgmc"]
+[ext_resource type="Script" path="res://Drain/drain.gd" id="1_wi1tj"]
+
+[node name="Drain" type="Area2D"]
+script = ExtResource("1_wi1tj")
+
+[node name="PlugSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_1mgmc")
+
+[node name="DrainSprite" type="Sprite2D" parent="."]
+position = Vector2(-0.500001, -264.5)
+scale = Vector2(0.226562, 3.11719)
+texture = ExtResource("1_1mgmc")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(77, 77, -76, 78, -77, -82, -25, -82, -24, -473, 26, -472, 25, -92, 75, -94)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
