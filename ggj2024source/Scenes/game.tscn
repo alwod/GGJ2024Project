@@ -1,9 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://b5yh1n0snkwwh"]
+[gd_scene load_steps=13 format=3 uid="uid://b5yh1n0snkwwh"]
 
 [ext_resource type="Texture2D" uid="uid://6kr8qntjkxsn" path="res://Art/bath.png" id="1_642da"]
 [ext_resource type="Texture2D" uid="uid://dmhuiln1x2pul" path="res://Art/bathroom/wall.png" id="1_cnihc"]
 [ext_resource type="PackedScene" uid="uid://bpr51htjut4js" path="res://Scenes/water.tscn" id="1_fb3qe"]
 [ext_resource type="PackedScene" uid="uid://u2or4d8medwc" path="res://Scenes/floating_object.tscn" id="2_70nj0"]
+[ext_resource type="PackedScene" uid="uid://b5spf2dn1ciu7" path="res://Scenes/duck.tscn" id="3_lo5nj"]
+[ext_resource type="PackedScene" uid="uid://jhfg7xuqtwje" path="res://Scenes/duck_boundary.tscn" id="4_k5c8s"]
+[ext_resource type="PackedScene" uid="uid://dt0h6dhdphaqe" path="res://Scenes/bubble_spawner.tscn" id="4_snigy"]
+[ext_resource type="AudioStream" uid="uid://cgax84py243vn" path="res://BGM1.wav" id="7_beach"]
 [ext_resource type="Texture2D" uid="uid://dk2is2kpnuhrt" path="res://Art/bathroom/bathtub_background.png" id="3_1xmsv"]
 [ext_resource type="PackedScene" uid="uid://d1nee1knmbq45" path="res://Scenes/duck.tscn" id="3_lo5nj"]
 [ext_resource type="PackedScene" path="res://Scenes/duck_boundary.tscn" id="4_k5c8s"]
@@ -54,6 +58,7 @@ mass = 8.0
 position = Vector2(882, -2252)
 mass = 8.0
 
+
 [node name="Duck" parent="." groups=["bubbleable"] instance=ExtResource("3_lo5nj")]
 position = Vector2(329, -1125)
 mass = 20.0
@@ -66,6 +71,10 @@ position = Vector2(1005, 136)
 zoom = Vector2(0.12, 0.12)
 position_smoothing_enabled = true
 
+[node name="Camera2D" type="Camera2D" parent="Duck"]
+position = Vector2(4411, 56)
+zoom = Vector2(0.1, 0.1)
+
 [node name="DuckBoundary" parent="." instance=ExtResource("4_k5c8s")]
 position = Vector2(791, 109)
 scale = Vector2(7.88, 1)
@@ -74,6 +83,15 @@ scale = Vector2(7.88, 1)
 position = Vector2(4444, 2190)
 scale = Vector2(2.44, 2.44)
 
+[node name="Water" parent="." instance=ExtResource("1_fb3qe")]
+position = Vector2(-1388, -153)
+scale = Vector2(8.35595, 4.40239)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_beach")
+autoplay = true
+bus = &"BGM1"
+playback_type = 1
 [node name="Fish" parent="." instance=ExtResource("7_3380c")]
 position = Vector2(382, 1222)
 scale = Vector2(4.429, 4.36)
