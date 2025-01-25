@@ -39,7 +39,9 @@ texture = ExtResource("3_1xmsv")
 [node name="Players" type="Node" parent="."]
 
 [node name="Duck" parent="Players" groups=["bubbleable"] instance=ExtResource("3_lo5nj")]
-position = Vector2(329, -1125)
+position = Vector2(-841, -1091)
+collision_layer = 2
+collision_mask = 7
 mass = 20.0
 freeze_mode = 1
 move_speed = 50000
@@ -98,50 +100,74 @@ scale = Vector2(4.995, 4.995)
 
 [node name="FloatingObject" parent="Objects" instance=ExtResource("2_70nj0")]
 position = Vector2(1448, 4869)
+collision_layer = 4
+collision_mask = 7
 mass = 8.0
 
 [node name="FloatingObject2" parent="Objects" instance=ExtResource("2_70nj0")]
 position = Vector2(12256, 4772)
+collision_layer = 4
+collision_mask = 7
 mass = 8.0
 
 [node name="FloatingObject3" parent="Objects" instance=ExtResource("2_70nj0")]
 position = Vector2(11035, 4179)
+collision_layer = 4
+collision_mask = 7
 mass = 8.0
 
 [node name="FloatingObject4" parent="Objects" instance=ExtResource("2_70nj0")]
 position = Vector2(12188, 3637)
+collision_layer = 4
+collision_mask = 7
 mass = 8.0
 
 [node name="FloatingObject5" parent="Objects" instance=ExtResource("2_70nj0")]
 position = Vector2(12205, 2450)
+collision_layer = 4
+collision_mask = 7
 mass = 8.0
 
 [node name="FloatingObject6" parent="Objects" instance=ExtResource("2_70nj0")]
 position = Vector2(12103, 1229)
+collision_layer = 4
+collision_mask = 7
 mass = 8.0
 
 [node name="FloatingObject7" parent="Objects" instance=ExtResource("2_70nj0")]
 position = Vector2(12273, 42)
+collision_layer = 4
+collision_mask = 7
 mass = 8.0
 
 [node name="FloatingObject8" parent="Objects" instance=ExtResource("2_70nj0")]
 position = Vector2(13460, 1161)
+collision_layer = 4
+collision_mask = 7
 mass = 8.0
 
 [node name="FloatingObject9" parent="Objects" instance=ExtResource("2_70nj0")]
 position = Vector2(13460, 2534)
+collision_layer = 4
+collision_mask = 7
 mass = 8.0
 
 [node name="FloatingObject10" parent="Objects" instance=ExtResource("2_70nj0")]
 position = Vector2(13443, 3907)
+collision_layer = 4
+collision_mask = 7
 mass = 8.0
 
 [node name="FloatingObject11" parent="Objects" instance=ExtResource("2_70nj0")]
 position = Vector2(13511, 5111)
+collision_layer = 4
+collision_mask = 7
 mass = 8.0
 
 [node name="FloatingObject12" parent="Objects" instance=ExtResource("2_70nj0")]
 position = Vector2(13511, 5111)
+collision_layer = 4
+collision_mask = 7
 mass = 8.0
 
 [node name="BubbleSpawner" parent="Objects" instance=ExtResource("4_snigy")]
@@ -153,6 +179,7 @@ script = null
 z_index = 1
 position = Vector2(-1881, -314)
 scale = Vector2(19.4759, 10.261)
+collision_mask = 7
 
 [node name="Audio" type="Node" parent="."]
 

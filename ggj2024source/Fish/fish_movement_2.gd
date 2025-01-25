@@ -4,6 +4,8 @@ extends CharacterBody2D
 @export var acceleration = 1500
 @export var friction = 600
 
+@export var push_force = 1500
+
 var water_surface_y_level = 0
 @export var force_out_of_water = 5
 
@@ -33,6 +35,13 @@ func player_movement(delta):
 		velocity = velocity.limit_length(max_speed)
 		
 	move_and_slide()
+	
+	# This code makes pushing objects glitchyer but can't push them through walls.
+	# If uncommenting make sure to enable the 'mask 3' in the fish inspector.
+	#for i in get_slide_collision_count():
+		#var c = get_slide_collision(i)
+		#if c.get_collider() is RigidBody2D:
+			#c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
 
 
 func _physics_process(delta: float) -> void:
