@@ -7,16 +7,18 @@
 size = Vector2(28.0244, 27.0198)
 
 [node name="Duck" type="RigidBody2D"]
-position = Vector2(154, -398)
-scale = Vector2(0.16, 0.28)
 collision_layer = 3
+collision_mask = 3
+mass = 0.2
 script = ExtResource("1_qokuw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(14, 0)
+scale = Vector2(0.4, 0.64)
 texture = ExtResource("2_4lo1n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-33.5823, 11.7307)
+position = Vector2(-12, 18)
 rotation = 3.14159
-scale = Vector2(94.3165, 29.5539)
+scale = Vector2(40.4666, 18.6793)
 shape = SubResource("RectangleShape2D_86elp")

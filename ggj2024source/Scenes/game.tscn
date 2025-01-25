@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5yh1n0snkwwh"]
+[gd_scene load_steps=6 format=3 uid="uid://b5yh1n0snkwwh"]
 
 [ext_resource type="Texture2D" uid="uid://6kr8qntjkxsn" path="res://Art/bath.png" id="1_642da"]
 [ext_resource type="PackedScene" uid="uid://bpr51htjut4js" path="res://Scenes/water.tscn" id="1_fb3qe"]
 [ext_resource type="PackedScene" uid="uid://u2or4d8medwc" path="res://Scenes/floating_object.tscn" id="2_70nj0"]
 [ext_resource type="PackedScene" uid="uid://b5spf2dn1ciu7" path="res://Scenes/duck.tscn" id="4_0l0wm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5gnr"]
+size = Vector2(2066, 73)
 
 [node name="Game" type="Node2D"]
 
@@ -24,3 +27,13 @@ position = Vector2(-485, -110)
 scale = Vector2(1.72, 1)
 
 [node name="Duck" parent="." instance=ExtResource("4_0l0wm")]
+position = Vector2(130, -374)
+scale = Vector2(0.158849, 0.28)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(560, -78)
+collision_layer = 2
+collision_mask = 2
+
+[node name="DuckBoundary" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_u5gnr")

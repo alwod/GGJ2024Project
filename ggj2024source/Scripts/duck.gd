@@ -13,7 +13,7 @@ func _process(_delta):
 	if Input.is_action_pressed("duck_move_left"):
 		force.x -= move_speed
 	elif Input.is_action_pressed("duck_move_right"):
-		force.y += move_speed
+		force.x += move_speed
 	elif Input.is_action_pressed("duck_jump"):
 		apply_central_impulse(Vector2(0, -jump_potential))
 
