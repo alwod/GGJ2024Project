@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://4erqoi2mq6mt"]
+
+[ext_resource type="Script" path="res://Scripts/Menus/comic_strip.gd" id="1_ykl00"]
+
+[node name="ComicStrip" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ykl00")
+
+[node name="Skip Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 957.0
+offset_top = 612.0
+offset_right = 1150.0
+offset_bottom = 643.0
+text = "Skip"
+
+[connection signal="pressed" from="Skip Button" to="." method="_on_skip_button_pressed"]
