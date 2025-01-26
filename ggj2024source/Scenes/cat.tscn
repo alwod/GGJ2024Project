@@ -1,10 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://gu63e0fee7jj"]
+[gd_scene load_steps=7 format=3 uid="uid://gu63e0fee7jj"]
 
 [ext_resource type="Script" path="res://Scripts/cat.gd" id="1_1x0yu"]
 [ext_resource type="PackedScene" uid="uid://dqu43qab07ej3" path="res://Scenes/cat_paw.tscn" id="2_i8p6f"]
+[ext_resource type="AudioStream" uid="uid://d334dp4iav7h8" path="res://Audio/meow1.wav" id="3_h1hlx"]
+[ext_resource type="AudioStream" uid="uid://273h8h3kmghy" path="res://Audio/meow2.mp3" id="4_koxjy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yb67y"]
 size = Vector2(2610.8, 537.396)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_pqfe1"]
+random_pitch = 1.1
+random_volume_offset_db = 1.2
+streams_count = 2
+stream_0/stream = ExtResource("3_h1hlx")
+stream_1/stream = ExtResource("4_koxjy")
 
 [node name="Cat" type="Node2D"]
 scale = Vector2(3.61, 3.61)
@@ -25,6 +34,9 @@ script = null
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.437
+
+[node name="Meow" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_pqfe1")
 
 [connection signal="body_entered" from="CatArea" to="." method="_on_cat_area_body_entered"]
 [connection signal="body_exited" from="CatArea" to="." method="_on_cat_area_body_exited"]

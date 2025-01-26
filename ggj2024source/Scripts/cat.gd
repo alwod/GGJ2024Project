@@ -60,6 +60,7 @@ func move_paw():
 			player_position = fish.global_position
 		else:
 			player_position = duck.global_position
+		$Meow.play()
 	
 	cat_paw.global_position = player_position
 	cat_paw.global_position.y -= spawn_distance_from_player
