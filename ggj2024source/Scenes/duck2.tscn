@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://rpa5gadfh2jr"]
+
+[ext_resource type="Script" path="res://Scripts/duck_2.gd" id="1_vr8fi"]
+[ext_resource type="Texture2D" uid="uid://cghamlyk4iobk" path="res://Art/duck/Bub_1.png" id="2_amnyt"]
+[ext_resource type="Texture2D" uid="uid://cq6ma6smr5v3c" path="res://Art/duck/Bub_2.png" id="3_u1x0l"]
+[ext_resource type="Texture2D" uid="uid://bodev07pqady" path="res://Art/duck/Bub_3.png" id="4_5smor"]
+[ext_resource type="Texture2D" uid="uid://byx7bxxiq8bry" path="res://Art/duck/Bub_4.png" id="5_miwyb"]
+[ext_resource type="Texture2D" uid="uid://hoks3nou1rba" path="res://Art/duck/Bub_5.png" id="6_jg7t2"]
+[ext_resource type="Texture2D" uid="uid://chn8d1xaasqte" path="res://Art/duck/Bub_6.png" id="7_eyye4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_86elp"]
+size = Vector2(54.9998, 140.693)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_006kl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_amnyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u1x0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5smor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_miwyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jg7t2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_eyye4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Duck" type="CharacterBody2D" groups=["duck"]]
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("1_vr8fi")
+push_force = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.279991, -66.2848)
+rotation = 3.14159
+scale = Vector2(2, 0.924)
+shape = SubResource("RectangleShape2D_86elp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(10.72, -59.0973)
+scale = Vector2(0.210813, 0.211305)
+sprite_frames = SubResource("SpriteFrames_006kl")
+autoplay = "default"
+frame = 2
+frame_progress = 0.52133

@@ -174,14 +174,7 @@ collision_mask = 7
 
 [node name="Players" type="Node" parent="."]
 
-[node name="Duck" parent="Players" groups=["bubbleable"] instance=ExtResource("3_lo5nj")]
-position = Vector2(1478, -390)
-collision_layer = 2
-collision_mask = 7
-freeze_mode = 1
-move_speed = 2000
-jump_potential = 10
-jump_time = 1000
+[node name="Duck" parent="Players" instance=ExtResource("12_d4kyd")]
 
 [node name="Fish" parent="Players" groups=["bubbleable"] instance=ExtResource("7_3380c")]
 position = Vector2(2892, 352)
