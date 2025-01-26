@@ -615,7 +615,7 @@ scale = Vector2(1, 1)
 texture = ExtResource("9_nybm4")
 
 [node name="Sponge" parent="Objects" groups=["bubble_destoyer"] instance=ExtResource("2_70nj0")]
-position = Vector2(6505, -189)
+position = Vector2(6710, -83)
 scale = Vector2(1, 0.996416)
 
 [node name="CollisionShape2D" parent="Objects/Sponge" index="0" groups=["bubble_destoyer"]]

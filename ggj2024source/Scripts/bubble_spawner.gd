@@ -18,7 +18,8 @@ func gen_random_pos():
 func spawn_bubble():
 	var bubbleNode = bubble.instantiate()
 	bubbleNode.global_position = gen_random_pos()
-	bubbleNode.set_bubble_settings(rng.randf_range(10, 16), rng.randf_range(2, 5))
+	# First random is speed, 2nd is time
+	bubbleNode.set_bubble_settings(rng.randf_range(10, 16), rng.randf_range(2, 8))
 	add_child(bubbleNode)
 
 
