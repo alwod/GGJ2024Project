@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Floating/floatable_body_2d.gd" id="1_7e258"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6gun"]
-size = Vector2(1075.99, 968.67)
+size = Vector2(2112.16, 1301.2)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sg61p"]
 
