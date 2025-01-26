@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://dqotab3j2vdq2"]
+
+[ext_resource type="Texture2D" uid="uid://th6o5mgvs5ca" path="res://Fish/Bill_1.png" id="1_withe"]
+[ext_resource type="Texture2D" uid="uid://bcp1x3cjmvqqq" path="res://Fish/Bill_2.png" id="2_s63f6"]
+[ext_resource type="Texture2D" uid="uid://dim016hbyq1c1" path="res://Fish/Bill_3.png" id="3_m2hyl"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_withe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_s63f6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m2hyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_s63f6")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
