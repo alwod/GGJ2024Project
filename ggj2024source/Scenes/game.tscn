@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://1ndpnb8kq86t" path="res://Art/bathroom/sponge.png" id="9_sluua"]
 [ext_resource type="PackedScene" path="res://Scenes/wall.tscn" id="10_xsesx"]
 [ext_resource type="PackedScene" uid="uid://urc28gjxlce5" path="res://Drain/drain.tscn" id="12_oj41i"]
-[ext_resource type="PackedScene" uid="uid://b47eykl4pekws" path="res://Scenes/duck2.tscn" id="16_n5tly"]
+[ext_resource type="PackedScene" uid="uid://rpa5gadfh2jr" path="res://Scenes/duck2.tscn" id="16_n5tly"]
 [ext_resource type="PackedScene" uid="uid://gu63e0fee7jj" path="res://Scenes/cat.tscn" id="19_61lxv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mxcex"]
@@ -294,7 +294,7 @@ force_out_of_water = 15
 position = Vector2(1679, 9)
 scale = Vector2(7.88, 1)
 
-[node name="Duck" parent="Players" instance=ExtResource("16_n5tly")]
+[node name="Duck" parent="Players" groups=["bubbleable"] instance=ExtResource("16_n5tly")]
 position = Vector2(1624, -204)
 
 [node name="Camera2D" type="Camera2D" parent="Players" node_paths=PackedStringArray("fish", "duck")]
