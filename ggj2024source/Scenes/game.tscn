@@ -891,14 +891,14 @@ spawn_delay = 0.4
 [node name="Water" parent="." instance=ExtResource("1_fb3qe")]
 modulate = Color(1, 1, 1, 0.682353)
 z_index = 1
-position = Vector2(1062, -33)
+position = Vector2(1098, -33)
 scale = Vector2(2.157, 1.205)
 collision_mask = 7
 
 [node name="Players" type="Node" parent="."]
 
 [node name="Fish" parent="Players" groups=["bubbleable"] instance=ExtResource("7_3380c")]
-position = Vector2(22292, -746)
+position = Vector2(2130, -156)
 scale = Vector2(1.016, 1)
 max_speed = 1000
 acceleration = 4000
@@ -910,7 +910,7 @@ position = Vector2(-25441, -66)
 scale = Vector2(7.88, 1)
 
 [node name="Duck" parent="Players" groups=["bubbleable"] instance=ExtResource("16_n5tly")]
-position = Vector2(21954, -1027)
+position = Vector2(2941, -98)
 
 [node name="Camera2D" type="Camera2D" parent="Players" node_paths=PackedStringArray("fish", "duck")]
 position = Vector2(1984, 752)
