@@ -738,14 +738,23 @@ texture = ExtResource("9_dhhpb")
 [node name="FloatingObject8" parent="Objects" instance=ExtResource("11_6a8nn")]
 position = Vector2(27203, -2)
 
+[node name="Sprite2D" parent="Objects/FloatingObject8" index="1"]
+position = Vector2(21.9997, -117)
+scale = Vector2(1.44713, -1.37266)
+
 [node name="FloatingObject9" parent="Objects" instance=ExtResource("11_6a8nn")]
-position = Vector2(31436, -627)
+position = Vector2(30236, 813)
+
+[node name="Sprite2D" parent="Objects/FloatingObject9" index="1"]
+position = Vector2(21.9997, -117)
+scale = Vector2(1.44713, -1.37266)
 
 [node name="FloatingObject10" parent="Objects" instance=ExtResource("11_6a8nn")]
-position = Vector2(33588, -185)
+position = Vector2(33781, 130)
 
-[node name="FloatingObject11" parent="Objects" instance=ExtResource("11_6a8nn")]
-position = Vector2(36039, -520)
+[node name="Sprite2D" parent="Objects/FloatingObject10" index="1"]
+position = Vector2(21.9997, -117)
+scale = Vector2(1.44713, -1.37266)
 
 [node name="FloatingObject4" parent="Objects" instance=ExtResource("11_6a8nn")]
 position = Vector2(9353, -308)
@@ -866,33 +875,33 @@ duck = NodePath("../../Players/Duck")
 fish = NodePath("../../Players/Fish")
 
 [node name="Cat1" type="Sprite2D" parent="."]
-position = Vector2(5914, -2729)
-scale = Vector2(7.02181, 7.02181)
+position = Vector2(5002, -1945)
+scale = Vector2(5.45964, 5.45964)
 texture = ExtResource("21_cmliw")
 
 [node name="Cat2" type="Sprite2D" parent="."]
-position = Vector2(19219, -2942)
-scale = Vector2(8.45477, 8.45477)
+position = Vector2(17139, -2558)
+scale = Vector2(6.83211, 6.83211)
 texture = ExtResource("22_4re2f")
 
 [node name="Cat3" type="Sprite2D" parent="."]
-position = Vector2(11700, -2930)
-scale = Vector2(7.48384, 7.48384)
+position = Vector2(11060, -2434)
+scale = Vector2(5.09515, 5.09515)
 texture = ExtResource("23_nmipo")
 
 [node name="Cat4" type="Sprite2D" parent="."]
-position = Vector2(25646, -3910)
-scale = Vector2(7.28191, 7.28191)
+position = Vector2(22926, -3318)
+scale = Vector2(5.63464, 5.63464)
 texture = ExtResource("24_1k5q8")
 
 [node name="Cat5" type="Sprite2D" parent="."]
-position = Vector2(30920, -3566)
-scale = Vector2(8.43125, 8.43125)
+position = Vector2(31256, -2878)
+scale = Vector2(6.14878, 6.14878)
 texture = ExtResource("25_nb8dp")
 
 [node name="Cat6" type="Sprite2D" parent="."]
-position = Vector2(37591, -3500)
-scale = Vector2(8.14766, 8.14766)
+position = Vector2(36823, -2828)
+scale = Vector2(6.10427, 6.10427)
 texture = ExtResource("26_qqi65")
 
 [editable path="Objects/Boat"]
@@ -905,5 +914,8 @@ texture = ExtResource("26_qqi65")
 [editable path="Objects/Steve3"]
 [editable path="Objects/Steve4"]
 [editable path="Objects/Steve2"]
+[editable path="Objects/FloatingObject8"]
+[editable path="Objects/FloatingObject9"]
+[editable path="Objects/FloatingObject10"]
 [editable path="Objects/FloatingObject4"]
 [editable path="Objects/FloatingObject12"]
