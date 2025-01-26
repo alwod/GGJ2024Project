@@ -1,213 +1,45 @@
-[gd_scene load_steps=19 format=3 uid="uid://b5yh1n0snkwwh"]
+[gd_scene load_steps=8 format=3 uid="uid://b5yh1n0snkwwh"]
 
-[ext_resource type="Texture2D" uid="uid://dmhuiln1x2pul" path="res://Art/bathroom/wall.png" id="1_cnihc"]
+[ext_resource type="Texture2D" path="res://Art/bath.png" id="1_642da"]
 [ext_resource type="PackedScene" uid="uid://bpr51htjut4js" path="res://Scenes/water.tscn" id="1_fb3qe"]
 [ext_resource type="PackedScene" uid="uid://u2or4d8medwc" path="res://Scenes/floating_object.tscn" id="2_70nj0"]
-[ext_resource type="Texture2D" uid="uid://b0uhyd7lce2r5" path="res://Art/bathroom/bathtubleftalt.png" id="2_w486d"]
-[ext_resource type="Texture2D" uid="uid://dpougq8ojn6e5" path="res://Art/bathroom/bathtubright.png" id="3_85gsv"]
-[ext_resource type="Texture2D" uid="uid://biqtxl8hdc67c" path="res://Art/bathroom/bathtubmiddle.png" id="4_cnkm0"]
+[ext_resource type="PackedScene" uid="uid://b5spf2dn1ciu7" path="res://Scenes/duck.tscn" id="3_lo5nj"]
 [ext_resource type="PackedScene" uid="uid://jhfg7xuqtwje" path="res://Scenes/duck_boundary.tscn" id="4_k5c8s"]
-[ext_resource type="PackedScene" uid="uid://cd43gxqdw2o1g" path="res://Scenes/bubble_spawner.tscn" id="4_snigy"]
-[ext_resource type="Texture2D" uid="uid://dn6okkgsiaw0w" path="res://Art/bathroom/faucet.png" id="5_xkbd4"]
-[ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="6_cjvb0"]
-[ext_resource type="PackedScene" uid="uid://dprtvh6v4tbjh" path="res://Fish/fish.tscn" id="7_3380c"]
+[ext_resource type="PackedScene" uid="uid://dt0h6dhdphaqe" path="res://Scenes/bubble_spawner.tscn" id="4_snigy"]
 [ext_resource type="AudioStream" uid="uid://cgax84py243vn" path="res://Audio/BGM1.wav" id="7_beach"]
-[ext_resource type="Texture2D" uid="uid://cgn8xcjydxe7c" path="res://Art/bathroom/steve.png" id="9_dhhpb"]
-[ext_resource type="Texture2D" uid="uid://g7vnpycvryao" path="res://Art/bathroom/boat.png" id="9_nybm4"]
-[ext_resource type="PackedScene" path="res://Scenes/wall.tscn" id="10_xsesx"]
-[ext_resource type="PackedScene" uid="uid://urc28gjxlce5" path="res://Drain/drain.tscn" id="12_oj41i"]
-[ext_resource type="PackedScene" uid="uid://rpa5gadfh2jr" path="res://Scenes/duck2.tscn" id="13_jde2t"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mxcex"]
-size = Vector2(252, 243)
 
 [node name="Game" type="Node2D"]
 
-[node name="Background" type="Node" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3615, 282)
+scale = Vector2(10.5888, 11.6284)
+texture = ExtResource("1_642da")
 
-[node name="Wall" type="Sprite2D" parent="Background"]
-z_index = -1
-position = Vector2(7897, -1867.48)
-scale = Vector2(7.75041, 5.76315)
-texture = ExtResource("1_cnihc")
+[node name="FloatingObject2" parent="." instance=ExtResource("2_70nj0")]
+position = Vector2(1726, 1163)
+mass = 5.0
 
-[node name="Bathtubleftalt" type="Sprite2D" parent="Background"]
-position = Vector2(3099, 384.52)
-scale = Vector2(1.539, 1.48062)
-texture = ExtResource("2_w486d")
+[node name="Duck" parent="." groups=["bubbleable"] instance=ExtResource("3_lo5nj")]
+position = Vector2(-834, -593)
 
-[node name="Bathtubleftalt2" type="Sprite2D" parent="Background"]
-position = Vector2(10848, 382.52)
-scale = Vector2(2, 1.5075)
-texture = ExtResource("2_w486d")
-flip_h = true
+[node name="Camera2D" type="Camera2D" parent="Duck"]
+position = Vector2(4411, 56)
+zoom = Vector2(0.1, 0.1)
 
-[node name="Bathtubright" type="Sprite2D" parent="Background"]
-position = Vector2(11994, 389.52)
-scale = Vector2(1, 1.5125)
-texture = ExtResource("3_85gsv")
-
-[node name="Bathtubmiddle" type="Sprite2D" parent="Background"]
-position = Vector2(6882, 386.52)
-scale = Vector2(6, 1.5)
-texture = ExtResource("4_cnkm0")
-
-[node name="Faucet" type="Sprite2D" parent="Background"]
-position = Vector2(11489, -3.48001)
-scale = Vector2(1.44867, 1.52062)
-texture = ExtResource("5_xkbd4")
-
-[node name="Walls" type="Node" parent="."]
-
-[node name="Wall" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(1502, 720)
-
-[node name="Wall2" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(2213, 304)
-rotation = -3.14126
-
-[node name="Wall3" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(4555, -84.9999)
-rotation = -1.53108
-scale = Vector2(1.17033, 1.17033)
-
-[node name="Wall4" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(4797, 452)
-rotation = -1.7111
-scale = Vector2(1.17033, 1.17033)
-
-[node name="Wall5" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(3667, 579)
-rotation = 1.50219
-scale = Vector2(1.17033, 1.17033)
-
-[node name="Wall6" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(4283, 1993)
-rotation = -0.156552
-scale = Vector2(1.17033, 1.17033)
-
-[node name="Wall8" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(3291, 2124)
-rotation = 0.0570792
-scale = Vector2(1.17033, 1.17033)
-
-[node name="Wall9" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(2363, 1498)
-rotation = 3.17831
-scale = Vector2(1.17033, 1.17033)
-
-[node name="Wall10" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(1673, 1286)
-rotation = 3.60108
-scale = Vector2(1.17033, 1.17033)
-
-[node name="Wall11" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(1548, 810)
-rotation = 4.75057
-scale = Vector2(0.953542, 0.953542)
-
-[node name="Wall7" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(5075, 1837)
-rotation = 0.0570792
-scale = Vector2(1.17033, 1.17033)
-
-[node name="Objects" type="Node" parent="."]
-
-[node name="Boat" parent="Objects" instance=ExtResource("2_70nj0")]
-position = Vector2(2369, 1212)
-
-[node name="CollisionShape2D" parent="Objects/Boat" index="0"]
-position = Vector2(-3.5, -144)
-
-[node name="Sprite2D" parent="Objects/Boat" index="1"]
-scale = Vector2(1, 1)
-texture = ExtResource("9_nybm4")
-
-[node name="Boat2" parent="Objects" instance=ExtResource("2_70nj0")]
-position = Vector2(4914, -115)
-
-[node name="CollisionShape2D" parent="Objects/Boat2" index="0"]
-position = Vector2(-3.5, -144)
-
-[node name="Sprite2D" parent="Objects/Boat2" index="1"]
-scale = Vector2(1, 1)
-texture = ExtResource("9_nybm4")
-
-[node name="Steve" parent="Objects" instance=ExtResource("2_70nj0")]
-position = Vector2(4996, 1192)
-
-[node name="CollisionShape2D" parent="Objects/Steve" index="0"]
-position = Vector2(5, -123.5)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_mxcex")
-
-[node name="Sprite2D" parent="Objects/Steve" index="1"]
-scale = Vector2(-0.560876, -0.560876)
-texture = ExtResource("9_dhhpb")
-
-[node name="Steve2" parent="Objects" instance=ExtResource("2_70nj0")]
-position = Vector2(4384, 1328)
-
-[node name="CollisionShape2D" parent="Objects/Steve2" index="0"]
-position = Vector2(5, -123.5)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_mxcex")
-
-[node name="Sprite2D" parent="Objects/Steve2" index="1"]
-scale = Vector2(-0.560876, -0.560876)
-texture = ExtResource("9_dhhpb")
-
-[node name="Drain" parent="Objects" instance=ExtResource("12_oj41i")]
-position = Vector2(12196, 1223)
-scale = Vector2(2, 2)
-
-[node name="BubbleSpawner" parent="Objects" instance=ExtResource("4_snigy")]
-position = Vector2(6039, 1545)
-spawn_delay = 10.0
-
-[node name="Water" parent="." instance=ExtResource("1_fb3qe")]
-modulate = Color(1, 1, 1, 0.682353)
-z_index = 1
-position = Vector2(1062, -22)
-scale = Vector2(2.22224, 1.20491)
-collision_mask = 7
-
-[node name="Players" type="Node" parent="."]
-
-[node name="Duck" parent="Players" instance=ExtResource("13_jde2t")]
-position = Vector2(2021, -360)
-push_force = 100
-
-[node name="Fish" parent="Players" groups=["bubbleable"] instance=ExtResource("7_3380c")]
-position = Vector2(2892, 352)
-scale = Vector2(1.016, 1)
-max_speed = 1000
-acceleration = 4000
-push_force = 100
-force_out_of_water = 15
-
-[node name="DuckBoundary" parent="Players" instance=ExtResource("4_k5c8s")]
-position = Vector2(1679, 9)
+[node name="DuckBoundary" parent="." instance=ExtResource("4_k5c8s")]
+position = Vector2(629, -27)
 scale = Vector2(7.88, 1)
 
-[node name="Camera2D" type="Camera2D" parent="Players" node_paths=PackedStringArray("fish", "duck")]
-position = Vector2(1237, -1085)
-zoom = Vector2(0.12, 0.12)
-limit_bottom = 5500
-position_smoothing_enabled = true
-script = ExtResource("6_cjvb0")
-fish = NodePath("../Fish")
-duck = NodePath("../Duck")
+[node name="BubbleSpawner" parent="." instance=ExtResource("4_snigy")]
+position = Vector2(2952, 881)
+scale = Vector2(2.44, 2.44)
 
-[node name="Audio" type="Node" parent="."]
+[node name="Water" parent="." instance=ExtResource("1_fb3qe")]
+position = Vector2(-1388, -153)
+scale = Vector2(8.35595, 4.40239)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio"]
+[node name="Bgm1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_beach")
 autoplay = true
 bus = &"BGM1"
 playback_type = 1
-
-[editable path="Objects/Boat"]
-[editable path="Objects/Boat2"]
-[editable path="Objects/Steve"]
-[editable path="Objects/Steve2"]
