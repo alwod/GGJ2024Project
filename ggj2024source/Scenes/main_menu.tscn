@@ -14,9 +14,8 @@ grow_vertical = 2
 script = ExtResource("1_nfwik")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(644, 400)
+position = Vector2(641, 405)
 scale = Vector2(16.3156, -11.3169)
-zoom = Vector2(0.9, 0.9)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 2
@@ -36,10 +35,10 @@ layout_mode = 2
 
 [node name="Start Game Button" type="Button" parent="Control2"]
 layout_mode = 2
-offset_left = 860.0
-offset_top = 245.0
-offset_right = 1086.0
-offset_bottom = 308.0
+offset_left = 866.0
+offset_top = 227.0
+offset_right = 1092.0
+offset_bottom = 290.0
 theme_override_font_sizes/font_size = 40
 text = "Start Game"
 
