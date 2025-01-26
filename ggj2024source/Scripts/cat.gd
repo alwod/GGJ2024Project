@@ -1,7 +1,6 @@
 extends Node2D
 
 @export var spawn_distance_from_player = 5000
-@export var paw_size_scale = 0.25
 @export var paw_speed = 5000
 
 @export var duck: Node2D
@@ -32,7 +31,7 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	if can_move:
 		# If the paw is above the player, move down towards it's level.
-		if cat_paw.global_position.y <= player_position.y && !move_up:
+		if cat_paw.global_position.y <= player_position.y - 10 && !move_up:
 			cat_paw.global_position.y += paw_speed * delta
 		# Once the paw has reached the player's y level, move back up to its starting position.
 		else:
@@ -41,6 +40,7 @@ func _physics_process(delta: float) -> void:
 			# Stops the paw from moving once it's reached its starting position.
 			if cat_paw.global_position.y <= starting_pos.y:
 				reset_paw()
+				#if !fish_is_in && !duck_is_in:
 				move_paw()
 
 func reset_paw():
@@ -82,4 +82,5 @@ func _on_cat_area_body_exited(body: Node2D) -> void:
 			fish_is_in = false
 		else:
 			duck_is_in = false
+		move_up = true
 		reset_paw()

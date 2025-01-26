@@ -306,6 +306,14 @@ script = ExtResource("6_cjvb0")
 fish = NodePath("../Fish")
 duck = NodePath("../Duck")
 
+[node name="Cat" parent="Players" node_paths=PackedStringArray("duck", "fish") instance=ExtResource("19_61lxv")]
+position = Vector2(10468, 192)
+spawn_distance_from_player = 4000
+paw_size_scale = 0.55
+paw_speed = 3000
+duck = NodePath("../Duck")
+fish = NodePath("../Fish")
+
 [node name="Audio" type="Node" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio"]
@@ -313,11 +321,6 @@ stream = ExtResource("7_beach")
 autoplay = true
 bus = &"BGM1"
 playback_type = 1
-
-[node name="Cat" parent="." node_paths=PackedStringArray("duck", "fish") instance=ExtResource("19_61lxv")]
-position = Vector2(3051, -8)
-duck = NodePath("../Players/Duck")
-fish = NodePath("../Players/Fish")
 
 [editable path="Objects/Boat"]
 [editable path="Objects/Sponge"]

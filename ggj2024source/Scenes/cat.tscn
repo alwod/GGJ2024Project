@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dqu43qab07ej3" path="res://Scenes/cat_paw.tscn" id="2_i8p6f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yb67y"]
-size = Vector2(196.5, 164)
+size = Vector2(2610.8, 537.396)
 
 [node name="Cat" type="Node2D"]
 scale = Vector2(3.61, 3.61)
@@ -15,12 +15,12 @@ collision_layer = 0
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CatArea"]
-position = Vector2(-1, 0)
+position = Vector2(35.1801, 127.978)
 shape = SubResource("RectangleShape2D_yb67y")
 
 [node name="CatPaw" parent="." instance=ExtResource("2_i8p6f")]
-position = Vector2(22, -404)
-scale = Vector2(0.25, 0.25)
+position = Vector2(13.5734, -1612.19)
+scale = Vector2(0.455, 0.455)
 script = null
 
 [node name="Timer" type="Timer" parent="."]

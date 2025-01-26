@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dxgm0hy4ay6le"]
+[gd_scene load_steps=22 format=3 uid="uid://b3wqrdqoratbl"]
 
 [ext_resource type="Texture2D" uid="uid://dmhuiln1x2pul" path="res://Art/bathroom/wall.png" id="1_qsdv0"]
 [ext_resource type="Texture2D" uid="uid://b0uhyd7lce2r5" path="res://Art/bathroom/bathtubleftalt.png" id="2_x5qlt"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://g7vnpycvryao" path="res://Art/bathroom/boat.png" id="8_r8cij"]
 [ext_resource type="Texture2D" uid="uid://1ndpnb8kq86t" path="res://Art/bathroom/sponge.png" id="9_6s35l"]
 [ext_resource type="Texture2D" uid="uid://cgn8xcjydxe7c" path="res://Art/bathroom/steve.png" id="10_m3ry3"]
-[ext_resource type="PackedScene" uid="uid://bs526o11vwoem" path="res://Scenes/floating_object2.tscn" id="11_6g4o7"]
+[ext_resource type="PackedScene" path="res://Scenes/floating_object2.tscn" id="11_6g4o7"]
 [ext_resource type="PackedScene" uid="uid://urc28gjxlce5" path="res://Drain/drain.tscn" id="11_gfyf5"]
 [ext_resource type="PackedScene" uid="uid://cd43gxqdw2o1g" path="res://Scenes/bubble_spawner.tscn" id="12_dfe4s"]
 [ext_resource type="PackedScene" uid="uid://bpr51htjut4js" path="res://Scenes/water.tscn" id="13_7lxmc"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://rpa5gadfh2jr" path="res://Scenes/duck2.tscn" id="16_xclp1"]
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="17_n1lxl"]
 [ext_resource type="AudioStream" uid="uid://cgax84py243vn" path="res://Audio/BGM1.wav" id="18_2k7jt"]
+[ext_resource type="PackedScene" uid="uid://gu63e0fee7jj" path="res://Scenes/cat.tscn" id="20_8rpm3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mxcex"]
 size = Vector2(252, 243)
@@ -638,7 +639,7 @@ collision_mask = 7
 [node name="Players" type="Node" parent="."]
 
 [node name="Fish" parent="Players" groups=["bubbleable"] instance=ExtResource("14_apbln")]
-position = Vector2(2260, 215)
+position = Vector2(29236, 269)
 scale = Vector2(1.016, 1)
 max_speed = 1000
 acceleration = 4000
@@ -650,7 +651,7 @@ position = Vector2(1679, 9)
 scale = Vector2(7.88, 1)
 
 [node name="Duck" parent="Players" instance=ExtResource("16_xclp1")]
-position = Vector2(1624, -204)
+position = Vector2(28924, -137)
 
 [node name="Camera2D" type="Camera2D" parent="Players" node_paths=PackedStringArray("fish", "duck")]
 position = Vector2(1237, -1085)
@@ -668,6 +669,20 @@ stream = ExtResource("18_2k7jt")
 autoplay = true
 bus = &"BGM1"
 playback_type = 1
+
+[node name="Cats" type="Node" parent="."]
+
+[node name="Cat" parent="Cats" node_paths=PackedStringArray("duck", "fish") instance=ExtResource("20_8rpm3")]
+position = Vector2(34164, 256)
+paw_speed = 5500
+duck = NodePath("../../Players/Duck")
+fish = NodePath("../../Players/Fish")
+
+[node name="Cat2" parent="Cats" node_paths=PackedStringArray("duck", "fish") instance=ExtResource("20_8rpm3")]
+position = Vector2(34157, 285)
+paw_speed = 5500
+duck = NodePath("../../Players/Duck")
+fish = NodePath("../../Players/Fish")
 
 [editable path="Objects/Boat"]
 [editable path="Objects/Sponge"]
