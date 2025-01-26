@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://dprtvh6v4tbjh"]
+[gd_scene load_steps=6 format=3 uid="uid://dprtvh6v4tbjh"]
 
 [ext_resource type="Script" path="res://Fish/fish_movement_2.gd" id="1_sviwx"]
 [ext_resource type="SpriteFrames" uid="uid://dqotab3j2vdq2" path="res://Art/animation frames/fish.tres" id="2_ulsdl"]
-[ext_resource type="AudioStream" uid="uid://ddfd5ft10lsok" path="res://Audio/FishMove.wav" id="5_ekvka"]
+[ext_resource type="AudioStream" uid="uid://ddfd5ft10lsok" path="res://Audio/FishMove.wav" id="3_ymb2a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htts3"]
 size = Vector2(80.5, 59.5)
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_278f2"]
-random_pitch = 1.15
-random_volume_offset_db = 1.57
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1ciio"]
+random_pitch = 1.1
+random_volume_offset_db = 1.1
 streams_count = 1
-stream_0/stream = ExtResource("5_ekvka")
+stream_0/stream = ExtResource("3_ymb2a")
 
 [node name="Fish" type="CharacterBody2D" groups=["fish"]]
 script = ExtResource("1_sviwx")
@@ -33,7 +33,5 @@ autoplay = "move"
 frame_progress = 0.136683
 
 [node name="FishMove" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamRandomizer_278f2")
-autoplay = true
+stream = SubResource("AudioStreamRandomizer_1ciio")
 bus = &"FishMove"
-playback_type = 1
