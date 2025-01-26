@@ -38,10 +38,10 @@ func player_movement(delta):
 	
 	# This code makes pushing objects glitchyer but can't push them through walls.
 	# If uncommenting make sure to enable the 'mask 3' in the fish inspector.
-	#for i in get_slide_collision_count():
-		#var c = get_slide_collision(i)
-		#if c.get_collider() is RigidBody2D:
-			#c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
 
 
 func _physics_process(delta: float) -> void:
