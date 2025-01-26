@@ -76,9 +76,13 @@ texture = ExtResource("5_xkbd4")
 
 [node name="FloatingObject" parent="Background" instance=ExtResource("6_46n4y")]
 position = Vector2(9497, -372)
+mass = 2.4
+fluid_damp = 2.0
 
 [node name="FloatingObject2" parent="Background" instance=ExtResource("6_46n4y")]
 position = Vector2(10419, -365)
+mass = 2.4
+fluid_damp = 2.0
 
 [node name="Walls" type="Node" parent="."]
 
@@ -90,7 +94,7 @@ position = Vector2(2213, 304)
 rotation = -3.14126
 
 [node name="Wall3" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(4555, -84.9999)
+position = Vector2(4555, -55)
 rotation = -1.53108
 scale = Vector2(1.17033, 1.17033)
 
@@ -215,7 +219,7 @@ rotation = 9.45579
 scale = Vector2(1.17033, 1.17033)
 
 [node name="Wall38" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(7976, -436)
+position = Vector2(8046, -281)
 rotation = 9.45579
 scale = Vector2(1.17033, 1.17033)
 
@@ -255,7 +259,7 @@ rotation = 14.268
 scale = Vector2(1.17033, 1.17033)
 
 [node name="Wall35" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(12195, -817)
+position = Vector2(12240, -636)
 rotation = 15.7452
 scale = Vector2(1.17033, 1.17033)
 
@@ -270,7 +274,7 @@ rotation = 15.7452
 scale = Vector2(0.888702, 0.888702)
 
 [node name="Wall48" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(15996, -361)
+position = Vector2(16103, -361)
 rotation = 15.7452
 scale = Vector2(0.888702, 0.888702)
 
@@ -292,6 +296,21 @@ scale = Vector2(0.447962, 0.465054)
 [node name="Wall53" parent="Walls" instance=ExtResource("10_xsesx")]
 position = Vector2(16129, -533)
 rotation = 15.5611
+scale = Vector2(0.447962, 0.465054)
+
+[node name="Wall115" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(16748, -673)
+rotation = 15.5611
+scale = Vector2(0.447962, 0.465054)
+
+[node name="Wall116" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(18152, -869)
+rotation = 15.5611
+scale = Vector2(0.447962, 0.465054)
+
+[node name="Wall117" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(18077, -490.999)
+rotation = 13.8909
 scale = Vector2(0.447962, 0.465054)
 
 [node name="Wall54" parent="Walls" instance=ExtResource("10_xsesx")]
@@ -344,14 +363,14 @@ position = Vector2(19973, -910)
 rotation = 15.7452
 scale = Vector2(0.888702, 0.888702)
 
-[node name="Wall112" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(20145, -1122)
-rotation = 15.7136
-scale = Vector2(0.485468, 0.485468)
-
 [node name="Wall113" parent="Walls" instance=ExtResource("10_xsesx")]
 position = Vector2(19513, -739)
 rotation = 15.7136
+scale = Vector2(0.485468, 0.485468)
+
+[node name="Wall118" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(19505, -683)
+rotation = 18.8531
 scale = Vector2(0.485468, 0.485468)
 
 [node name="Wall114" parent="Walls" instance=ExtResource("10_xsesx")]
@@ -390,7 +409,7 @@ rotation = 20.441
 scale = Vector2(1.49405, 1.49405)
 
 [node name="Wall71" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(22190, -461)
+position = Vector2(22150, -589)
 rotation = 22.1066
 scale = Vector2(1.49405, 1.49405)
 
@@ -440,9 +459,59 @@ rotation = 25.1884
 scale = Vector2(0.886999, 0.886999)
 
 [node name="Wall81" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(22037, -223)
-rotation = 25.1884
+position = Vector2(22097, -227)
+rotation = 24.9128
 scale = Vector2(0.886999, 0.886999)
+
+[node name="Wall112" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(23148, -383)
+rotation = 25.1884
+scale = Vector2(0.564893, 0.564893)
+
+[node name="Wall124" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(21378, -243.001)
+rotation = 27.3483
+scale = Vector2(0.564893, 0.564893)
+
+[node name="Wall126" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(21358, -156)
+rotation = 28.3054
+scale = Vector2(0.564893, 0.564893)
+
+[node name="Wall125" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(22614, -28)
+rotation = 26.9364
+scale = Vector2(0.564893, 0.564893)
+
+[node name="Wall119" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(22811, -839)
+rotation = 25.1884
+scale = Vector2(0.564893, 0.564893)
+
+[node name="Wall120" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(23656, -1185)
+rotation = 25.1884
+scale = Vector2(0.564893, 0.564893)
+
+[node name="Wall127" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(23521, -1158)
+rotation = 24.6229
+scale = Vector2(0.564893, 0.564893)
+
+[node name="Wall121" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(24199, -1660)
+rotation = 27.5681
+scale = Vector2(0.564893, 0.564893)
+
+[node name="Wall122" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(25098, -2090)
+rotation = 27.5681
+scale = Vector2(0.564893, 0.564893)
+
+[node name="Wall123" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(26314, -2067)
+rotation = 27.5681
+scale = Vector2(0.564893, 0.564893)
 
 [node name="Wall62" parent="Walls" instance=ExtResource("10_xsesx")]
 position = Vector2(20211, 1413)
@@ -655,7 +724,7 @@ scale = Vector2(1.17033, 1.17033)
 position = Vector2(2369, 1212)
 
 [node name="CollisionShape2D" parent="Objects/Boat" index="0"]
-position = Vector2(11.5, -144)
+position = Vector2(11.5, -160.625)
 
 [node name="Sprite2D" parent="Objects/Boat" index="1"]
 scale = Vector2(1, 1)
@@ -808,19 +877,18 @@ position = Vector2(18312, 2903)
 spawn_delay = 4.0
 
 [node name="BubbleSpawner4" parent="Objects" instance=ExtResource("4_snigy")]
-position = Vector2(22309, 5739)
-spawn_delay = 1.5
+position = Vector2(22332, 6576)
+spawn_delay = 0.4
 
 [node name="BubbleSpawner5" parent="Objects" instance=ExtResource("4_snigy")]
-position = Vector2(24466, 5759)
-spawn_delay = 1.5
+position = Vector2(24489, 6596)
+spawn_delay = 0.4
 
 [node name="BubbleSpawner6" parent="Objects" instance=ExtResource("4_snigy")]
-position = Vector2(26694, 5749)
-spawn_delay = 1.5
+position = Vector2(26717, 6586)
+spawn_delay = 0.4
 
 [node name="Water" parent="." instance=ExtResource("1_fb3qe")]
-visible = false
 modulate = Color(1, 1, 1, 0.682353)
 z_index = 1
 position = Vector2(1062, -33)
@@ -830,7 +898,7 @@ collision_mask = 7
 [node name="Players" type="Node" parent="."]
 
 [node name="Fish" parent="Players" groups=["bubbleable"] instance=ExtResource("7_3380c")]
-position = Vector2(2275, 207)
+position = Vector2(22292, -746)
 scale = Vector2(1.016, 1)
 max_speed = 1000
 acceleration = 4000
@@ -842,7 +910,7 @@ position = Vector2(-25441, -66)
 scale = Vector2(7.88, 1)
 
 [node name="Duck" parent="Players" groups=["bubbleable"] instance=ExtResource("16_n5tly")]
-position = Vector2(1937, -74)
+position = Vector2(21954, -1027)
 
 [node name="Camera2D" type="Camera2D" parent="Players" node_paths=PackedStringArray("fish", "duck")]
 position = Vector2(1984, 752)

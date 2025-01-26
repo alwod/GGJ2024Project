@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://cgn8xcjydxe7c" path="res://Art/bathroom/steve.png" id="2_fkb3u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6gun"]
-size = Vector2(3129.3, 2396.22)
+size = Vector2(3129.3, 2185.47)
 
 [node name="FloatingObject" type="RigidBody2D"]
 script = ExtResource("1_bxy4d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(47.5, -265.5)
+position = Vector2(47.5, -242.5)
 scale = Vector2(0.21826, 0.21826)
 shape = SubResource("RectangleShape2D_x6gun")
 
