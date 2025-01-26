@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://u2or4d8medwc" path="res://Scenes/floating_object.tscn" id="2_70nj0"]
 [ext_resource type="Texture2D" uid="uid://b0uhyd7lce2r5" path="res://Art/bathroom/bathtubleftalt.png" id="2_w486d"]
 [ext_resource type="Texture2D" uid="uid://dpougq8ojn6e5" path="res://Art/bathroom/bathtubright.png" id="3_85gsv"]
-[ext_resource type="PackedScene" uid="uid://d1nee1knmbq45" path="res://Scenes/duck.tscn" id="3_lo5nj"]
 [ext_resource type="Texture2D" uid="uid://biqtxl8hdc67c" path="res://Art/bathroom/bathtubmiddle.png" id="4_cnkm0"]
 [ext_resource type="PackedScene" path="res://Scenes/duck_boundary.tscn" id="4_k5c8s"]
 [ext_resource type="PackedScene" uid="uid://cd43gxqdw2o1g" path="res://Scenes/bubble_spawner.tscn" id="4_snigy"]
@@ -15,9 +14,10 @@
 [ext_resource type="AudioStream" uid="uid://cgax84py243vn" path="res://Audio/BGM1.wav" id="7_beach"]
 [ext_resource type="Texture2D" uid="uid://cgn8xcjydxe7c" path="res://Art/bathroom/steve.png" id="9_dhhpb"]
 [ext_resource type="Texture2D" uid="uid://g7vnpycvryao" path="res://Art/bathroom/boat.png" id="9_nybm4"]
-[ext_resource type="Texture2D" uid="uid://d3h1suvr8rshr" path="res://Art/bathroom/sponge.png" id="9_sluua"]
+[ext_resource type="Texture2D" uid="uid://1ndpnb8kq86t" path="res://Art/bathroom/sponge.png" id="9_sluua"]
 [ext_resource type="PackedScene" uid="uid://d2etyhfvt5fgr" path="res://Scenes/wall.tscn" id="10_xsesx"]
 [ext_resource type="PackedScene" uid="uid://urc28gjxlce5" path="res://Drain/drain.tscn" id="12_oj41i"]
+[ext_resource type="PackedScene" uid="uid://rpa5gadfh2jr" path="res://Scenes/duck2.tscn" id="16_n5tly"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mxcex"]
 size = Vector2(252, 243)
@@ -272,9 +272,6 @@ scale = Vector2(2, 2)
 position = Vector2(6199, 1566)
 spawn_delay = 4.0
 
-[node name="FloatingObject" parent="Objects" instance=ExtResource("2_70nj0")]
-position = Vector2(2943, -543)
-
 [node name="Water" parent="." instance=ExtResource("1_fb3qe")]
 modulate = Color(1, 1, 1, 0.682353)
 z_index = 1
@@ -284,17 +281,8 @@ collision_mask = 7
 
 [node name="Players" type="Node" parent="."]
 
-[node name="Duck" parent="Players" groups=["bubbleable"] instance=ExtResource("3_lo5nj")]
-position = Vector2(4794, -556)
-collision_layer = 2
-collision_mask = 7
-freeze_mode = 1
-move_speed = 2000
-jump_potential = 10
-jump_time = 1000
-
 [node name="Fish" parent="Players" groups=["bubbleable"] instance=ExtResource("7_3380c")]
-position = Vector2(5108, 223)
+position = Vector2(2260, 215)
 scale = Vector2(1.016, 1)
 max_speed = 1000
 acceleration = 4000
@@ -304,6 +292,9 @@ force_out_of_water = 15
 [node name="DuckBoundary" parent="Players" instance=ExtResource("4_k5c8s")]
 position = Vector2(1679, 9)
 scale = Vector2(7.88, 1)
+
+[node name="Duck" parent="Players" instance=ExtResource("16_n5tly")]
+position = Vector2(1624, -204)
 
 [node name="Camera2D" type="Camera2D" parent="Players" node_paths=PackedStringArray("fish", "duck")]
 position = Vector2(1237, -1085)
