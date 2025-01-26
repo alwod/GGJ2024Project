@@ -45,23 +45,23 @@ scale = Vector2(1.539, 1.48062)
 texture = ExtResource("2_x5qlt")
 
 [node name="Bathtubleftalt2" type="Sprite2D" parent="Background"]
-position = Vector2(23696, 395.496)
+position = Vector2(37284, 339)
 scale = Vector2(2, 1.5075)
 texture = ExtResource("2_x5qlt")
 flip_h = true
 
 [node name="Bathtubright" type="Sprite2D" parent="Background"]
-position = Vector2(24842, 402.496)
+position = Vector2(38406, 341)
 scale = Vector2(1, 1.5125)
 texture = ExtResource("3_s4iyx")
 
 [node name="Bathtubmiddle" type="Sprite2D" parent="Background"]
-position = Vector2(12670, 393)
-scale = Vector2(12.9687, 1.5)
+position = Vector2(18614, 393)
+scale = Vector2(20.381, 1.638)
 texture = ExtResource("4_n4d1a")
 
 [node name="Faucet" type="Sprite2D" parent="Background"]
-position = Vector2(24337, 9.49594)
+position = Vector2(38001, 19)
 scale = Vector2(1.44867, 1.52062)
 texture = ExtResource("5_6df0a")
 
@@ -230,7 +230,7 @@ rotation = 11.0632
 scale = Vector2(1.17033, 1.17033)
 
 [node name="Wall32" parent="Walls" instance=ExtResource("6_5j753")]
-position = Vector2(11052, 1120)
+position = Vector2(11153, 687)
 rotation = 13.966
 scale = Vector2(1.17033, 1.17033)
 
@@ -323,6 +323,81 @@ scale = Vector2(1.49405, 1.49405)
 position = Vector2(20245, 316)
 rotation = 20.441
 scale = Vector2(1.49405, 1.49405)
+
+[node name="Wall67" parent="Walls" instance=ExtResource("6_5j753")]
+position = Vector2(27905, 2251)
+rotation = 20.441
+scale = Vector2(1.49405, 1.49405)
+
+[node name="Wall68" parent="Walls" instance=ExtResource("6_5j753")]
+position = Vector2(27865, 527)
+rotation = 20.441
+scale = Vector2(1.49405, 1.49405)
+
+[node name="Wall69" parent="Walls" instance=ExtResource("6_5j753")]
+position = Vector2(27875, -662)
+rotation = 20.441
+scale = Vector2(1.49405, 1.49405)
+
+[node name="Wall70" parent="Walls" instance=ExtResource("6_5j753")]
+position = Vector2(27865, -1841)
+rotation = 20.441
+scale = Vector2(1.49405, 1.49405)
+
+[node name="Wall71" parent="Walls" instance=ExtResource("6_5j753")]
+position = Vector2(22190, -461)
+rotation = 22.1066
+scale = Vector2(1.49405, 1.49405)
+
+[node name="Wall72" parent="Walls" instance=ExtResource("6_5j753")]
+position = Vector2(24115, -1469)
+rotation = 22.1066
+scale = Vector2(1.49405, 1.49405)
+
+[node name="Wall73" parent="Walls" instance=ExtResource("6_5j753")]
+position = Vector2(25687, -1056)
+rotation = 22.1066
+scale = Vector2(1.49405, 1.49405)
+
+[node name="Wall74" parent="Walls" instance=ExtResource("6_5j753")]
+position = Vector2(27693, -2326)
+rotation = 22.1066
+scale = Vector2(1.49405, 1.49405)
+
+[node name="Wall75" parent="Walls" instance=ExtResource("6_5j753")]
+position = Vector2(26091, -1369)
+rotation = 22.1066
+scale = Vector2(0.886999, 0.886999)
+
+[node name="Wall76" parent="Walls" instance=ExtResource("6_5j753")]
+position = Vector2(24794, -1547)
+rotation = 23.6157
+scale = Vector2(0.886999, 0.886999)
+
+[node name="Wall77" parent="Walls" instance=ExtResource("6_5j753")]
+position = Vector2(26785, -1911)
+rotation = 25.1034
+scale = Vector2(0.886999, 0.886999)
+
+[node name="Wall78" parent="Walls" instance=ExtResource("6_5j753")]
+position = Vector2(27666, -1360)
+rotation = 25.6956
+scale = Vector2(0.886999, 0.886999)
+
+[node name="Wall79" parent="Walls" instance=ExtResource("6_5j753")]
+position = Vector2(25513, -1817)
+rotation = 25.1884
+scale = Vector2(0.886999, 0.886999)
+
+[node name="Wall80" parent="Walls" instance=ExtResource("6_5j753")]
+position = Vector2(23614, -435)
+rotation = 25.1884
+scale = Vector2(0.886999, 0.886999)
+
+[node name="Wall81" parent="Walls" instance=ExtResource("6_5j753")]
+position = Vector2(22037, -223)
+rotation = 25.1884
+scale = Vector2(0.886999, 0.886999)
 
 [node name="Wall62" parent="Walls" instance=ExtResource("6_5j753")]
 position = Vector2(20211, 1413)
@@ -454,6 +529,16 @@ position = Vector2(-3.5, -144)
 scale = Vector2(1, 1)
 texture = ExtResource("8_r8cij")
 
+[node name="Boat4" parent="Objects" instance=ExtResource("7_65rha")]
+position = Vector2(26311, 950)
+
+[node name="CollisionShape2D" parent="Objects/Boat4" index="0"]
+position = Vector2(-3.5, -144)
+
+[node name="Sprite2D" parent="Objects/Boat4" index="1"]
+scale = Vector2(1, 1)
+texture = ExtResource("8_r8cij")
+
 [node name="Steve" parent="Objects" instance=ExtResource("7_65rha")]
 position = Vector2(4996, 1192)
 
@@ -496,6 +581,15 @@ position = Vector2(10032, -291)
 [node name="FloatingObject2" parent="Objects" instance=ExtResource("11_6g4o7")]
 position = Vector2(10832, -228)
 
+[node name="FloatingObject6" parent="Objects" instance=ExtResource("11_6g4o7")]
+position = Vector2(23865, 89)
+
+[node name="FloatingObject7" parent="Objects" instance=ExtResource("11_6g4o7")]
+position = Vector2(25285, 225)
+
+[node name="FloatingObject8" parent="Objects" instance=ExtResource("11_6g4o7")]
+position = Vector2(27203, -2)
+
 [node name="FloatingObject3" parent="Objects" instance=ExtResource("11_6g4o7")]
 position = Vector2(11369, -208)
 
@@ -506,7 +600,7 @@ position = Vector2(13385, -823)
 position = Vector2(9353, -308)
 
 [node name="Drain" parent="Objects" instance=ExtResource("11_gfyf5")]
-position = Vector2(25580, 939)
+position = Vector2(39597, 1146)
 scale = Vector2(2, 2)
 
 [node name="BubbleSpawner" parent="Objects" instance=ExtResource("12_dfe4s")]
@@ -520,6 +614,18 @@ spawn_delay = 4.0
 [node name="BubbleSpawner3" parent="Objects" instance=ExtResource("12_dfe4s")]
 position = Vector2(18350, 363)
 spawn_delay = 4.0
+
+[node name="BubbleSpawner4" parent="Objects" instance=ExtResource("12_dfe4s")]
+position = Vector2(22432, 1804)
+spawn_delay = 3.0
+
+[node name="BubbleSpawner5" parent="Objects" instance=ExtResource("12_dfe4s")]
+position = Vector2(24589, 1824)
+spawn_delay = 3.0
+
+[node name="BubbleSpawner6" parent="Objects" instance=ExtResource("12_dfe4s")]
+position = Vector2(26817, 1814)
+spawn_delay = 3.0
 
 [node name="Water" parent="." instance=ExtResource("13_7lxmc")]
 visible = false
@@ -568,6 +674,7 @@ playback_type = 1
 [editable path="Objects/Sponge2"]
 [editable path="Objects/Boat2"]
 [editable path="Objects/Boat3"]
+[editable path="Objects/Boat4"]
 [editable path="Objects/Steve"]
 [editable path="Objects/Steve3"]
 [editable path="Objects/Steve2"]
