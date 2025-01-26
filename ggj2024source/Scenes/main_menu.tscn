@@ -1,23 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://c84w35qxnrst5"]
+[gd_scene load_steps=3 format=3 uid="uid://c84w35qxnrst5"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/main_menu.gd" id="1_nfwik"]
+[ext_resource type="Texture2D" uid="uid://cq584o2gi8lg" path="res://Art/menus/SplashPage.png" id="2_y3plr"]
 
-[node name="MainMenu" type="CenterContainer"]
+[node name="MainMenu" type="Container"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 304.0
-offset_top = -113.0
-offset_right = 304.0
-offset_bottom = -113.0
+offset_right = -1152.0
+offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.971255, 0.988891)
 script = ExtResource("1_nfwik")
 
-[node name="Start Game Button" type="Button" parent="."]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(644, 400)
+scale = Vector2(16.3156, -11.3169)
+zoom = Vector2(0.9, 0.9)
+
+[node name="Control" type="Control" parent="."]
 layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 2
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 1251.0
+offset_bottom = 888.0
+texture = ExtResource("2_y3plr")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 2
+
+[node name="Start Game Button" type="Button" parent="Control2"]
+layout_mode = 2
+offset_left = 860.0
+offset_top = 245.0
+offset_right = 1086.0
+offset_bottom = 308.0
 theme_override_font_sizes/font_size = 40
 text = "Start Game"
 
-[connection signal="pressed" from="Start Game Button" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="Control2/Start Game Button" to="." method="_on_start_game_button_pressed"]
