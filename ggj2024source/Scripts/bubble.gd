@@ -9,7 +9,7 @@ func set_bubble_settings(destory_time, speed):
 	$Timer.wait_time = destory_time
 	float_speed = speed
 	
-func _on_body_entered(body):
+func _on_body_entered(body: Node):
 	if(body.is_in_group("bubbleable")):
 		$BubbleImpact.play()
 		hasCaptured = true;
@@ -20,7 +20,7 @@ func _on_body_entered(body):
 			rigid_body.set_freeze_enabled(true);
 			rigid_body.set_physics_process(false)
 			rigid_body.set_process(false)
-	if(body.is_in_group("bubble_destoryer")):
+	if(body.is_in_group("bubble_destoyer")):
 		destroy()
 	
 func _physics_process(delta):
