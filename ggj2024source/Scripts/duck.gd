@@ -22,12 +22,6 @@ func _process(_delta):
 		force.x += move_speed
 		can_flip = true
 		
-		
-	if Input.is_action_just_pressed("duck_move_left"):
-		$DuckMove.play()
-			
-	if Input.is_action_just_pressed("duck_move_right"):
-		$DuckMove.play()
 
 	if !freeze && can_flip:
 		$AnimatedSprite2D.flip_h = force.x < 0
@@ -36,7 +30,7 @@ func _process(_delta):
 
 	if Input.is_action_pressed("duck_jump") and time_since_last_jump > (jump_time * 1.5):
 		last_jump_time = Time.get_ticks_msec()
-		$Squeak.play()
+		
 
 	if time_since_last_jump < (jump_time / 2):
 		apply_impulse(Vector2(0, -jump_potential))
