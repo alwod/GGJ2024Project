@@ -32,6 +32,18 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	var should_flip := false
+
+	if direction < 0:
+		should_flip = true
+	elif direction > 0:
+		should_flip = false
+
+	if should_flip:
+		$AnimatedSprite2D.flip_h = true
+	else:
+		$AnimatedSprite2D.flip_h = false
+
 	move_and_slide()
 
 	for i in get_slide_collision_count():

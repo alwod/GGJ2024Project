@@ -1,39 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dprtvh6v4tbjh"]
+[gd_scene load_steps=4 format=3 uid="uid://dprtvh6v4tbjh"]
 
 [ext_resource type="Script" path="res://Fish/fish_movement_2.gd" id="1_sviwx"]
-[ext_resource type="Texture2D" uid="uid://th6o5mgvs5ca" path="res://Fish/Bill_1.png" id="2_uov6w"]
-[ext_resource type="Texture2D" uid="uid://bcp1x3cjmvqqq" path="res://Fish/Bill_2.png" id="3_driry"]
-[ext_resource type="Texture2D" uid="uid://dim016hbyq1c1" path="res://Fish/Bill_3.png" id="4_c6uwm"]
-[ext_resource type="AudioStream" uid="uid://ddfd5ft10lsok" path="res://Audio/FishMove.wav" id="5_ekvka"]
+[ext_resource type="SpriteFrames" uid="uid://dqotab3j2vdq2" path="res://Art/animation frames/fish.tres" id="2_ulsdl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htts3"]
 size = Vector2(80.5, 59.5)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_8r0h1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_uov6w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_driry")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_c6uwm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_driry")
-}],
-"loop": true,
-"name": &"move",
-"speed": 5.0
-}]
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_278f2"]
-random_pitch = 1.15
-random_volume_offset_db = 1.57
-streams_count = 1
-stream_0/stream = ExtResource("5_ekvka")
 
 [node name="Fish" type="CharacterBody2D" groups=["fish"]]
 script = ExtResource("1_sviwx")
@@ -49,13 +20,7 @@ shape = SubResource("RectangleShape2D_htts3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(9.88999, -77.1964)
 scale = Vector2(0.182703, 0.211066)
-sprite_frames = SubResource("SpriteFrames_8r0h1")
+sprite_frames = ExtResource("2_ulsdl")
 animation = &"move"
 autoplay = "move"
 frame_progress = 0.136683
-
-[node name="FishMove" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamRandomizer_278f2")
-autoplay = true
-bus = &"FishMove"
-playback_type = 1
