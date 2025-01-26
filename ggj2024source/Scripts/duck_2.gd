@@ -25,6 +25,14 @@ func _physics_process(delta: float) -> void:
 
 	if time_since_last_jump < (jump_time / 2):
 		velocity.y = JUMP_VELOCITY
+		$Squeak.play()
+		
+	if Input.is_action_just_pressed("duck_move_left"):
+		$DuckMove.play()
+			
+	if Input.is_action_just_pressed("duck_move_right"):
+		$DuckMove.play()
+
 
 	if time_since_last_jump > (jump_time / 2) && time_since_last_jump < jump_time:
 		#apply_impulse(Vector2(0, jump_potential))

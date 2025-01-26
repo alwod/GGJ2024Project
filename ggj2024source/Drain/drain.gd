@@ -26,3 +26,4 @@ func _on_plug_body_entered(body: Node2D) -> void:
 func _on_chain_body_entered(body: Node2D) -> void:
 	if body.is_in_group("duck"):
 		is_plug_open = true
+		$Draining.play()

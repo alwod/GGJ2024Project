@@ -17,9 +17,11 @@ func _process(_delta):
 	if Input.is_action_pressed("duck_move_left"):
 		force.x -= move_speed
 		can_flip = true
+		
 	elif Input.is_action_pressed("duck_move_right"):
 		force.x += move_speed
 		can_flip = true
+		
 
 	if !freeze && can_flip:
 		$AnimatedSprite2D.flip_h = force.x < 0
@@ -28,6 +30,7 @@ func _process(_delta):
 
 	if Input.is_action_pressed("duck_jump") and time_since_last_jump > (jump_time * 1.5):
 		last_jump_time = Time.get_ticks_msec()
+		
 
 	if time_since_last_jump < (jump_time / 2):
 		apply_impulse(Vector2(0, -jump_potential))
@@ -36,3 +39,7 @@ func _process(_delta):
 		apply_impulse(Vector2(0, jump_potential))
 
 	apply_force(force)
+	
+	
+
+		

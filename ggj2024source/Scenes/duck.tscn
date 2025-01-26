@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d1nee1knmbq45"]
+[gd_scene load_steps=10 format=3 uid="uid://b5spf2dn1ciu7"]
 
 [ext_resource type="Script" path="res://Scripts/duck.gd" id="1_qokuw"]
 [ext_resource type="Texture2D" uid="uid://cghamlyk4iobk" path="res://Art/duck/Bub_1.png" id="2_nq0mo"]

@@ -11,6 +11,7 @@ func set_bubble_settings(destory_time, speed):
 	
 func _on_body_entered(body: Node):
 	if(body.is_in_group("bubbleable")):
+		$BubbleImpact.play()
 		hasCaptured = true;
 		bodyCaptured = body
 
