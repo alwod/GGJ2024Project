@@ -83,7 +83,9 @@ func display_next_dialogue() -> void:
 
 	if currentDialogue["character"] == "Bub":
 		duckNode.play()
+		fishNode.stop()
 	else:
+		duckNode.stop()
 		fishNode.play()
 
 	var text: String = ""

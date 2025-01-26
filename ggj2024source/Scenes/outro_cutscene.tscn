@@ -1,0 +1,105 @@
+[gd_scene load_steps=11 format=3 uid="uid://cv80nhr1sqm8e"]
+
+[ext_resource type="Texture2D" uid="uid://b0uhyd7lce2r5" path="res://Art/bathroom/bathtubleftalt.png" id="1_7d07a"]
+[ext_resource type="Script" path="res://Scripts/outro_cutscene.gd" id="1_fc6wg"]
+[ext_resource type="Texture2D" uid="uid://biqtxl8hdc67c" path="res://Art/bathroom/bathtubmiddle.png" id="2_e6qyh"]
+[ext_resource type="Texture2D" uid="uid://dmhuiln1x2pul" path="res://Art/bathroom/wall.png" id="3_4n1m2"]
+[ext_resource type="Texture2D" uid="uid://cfhtffvkun0an" path="res://Art/menus/speech_bubble.png" id="4_mqm7f"]
+[ext_resource type="SpriteFrames" uid="uid://bok3vd63yqvvh" path="res://Art/animation frames/duck2.tres" id="5_5xkfs"]
+[ext_resource type="SpriteFrames" uid="uid://dqotab3j2vdq2" path="res://Art/animation frames/fish.tres" id="6_lpqbh"]
+[ext_resource type="PackedScene" uid="uid://bpr51htjut4js" path="res://Scenes/water.tscn" id="7_kogr5"]
+[ext_resource type="PackedScene" path="res://Scenes/wall.tscn" id="8_4vnu7"]
+[ext_resource type="PackedScene" uid="uid://urc28gjxlce5" path="res://Drain/drain.tscn" id="10_t6hst"]
+
+[node name="OutroCutscene" type="Node2D"]
+script = ExtResource("1_fc6wg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(12734, 246)
+zoom = Vector2(0.3, 0.3)
+
+[node name="Bathroom" type="Node" parent="."]
+
+[node name="Bathtubmiddle" type="Sprite2D" parent="Bathroom"]
+position = Vector2(6884, 386.52)
+scale = Vector2(6, 1.5)
+texture = ExtResource("2_e6qyh")
+
+[node name="Wall" type="Sprite2D" parent="Bathroom"]
+z_index = -1
+position = Vector2(7899, -1867.48)
+scale = Vector2(7.75041, 5.76315)
+texture = ExtResource("3_4n1m2")
+
+[node name="Bathtubleftalt2" type="Sprite2D" parent="Bathroom"]
+position = Vector2(10848, 382.52)
+scale = Vector2(2, 1.5075)
+texture = ExtResource("1_7d07a")
+flip_h = true
+
+[node name="SpeechBubble" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(12993, -258)
+scale = Vector2(2.36839, 1.61328)
+texture = ExtResource("4_mqm7f")
+
+[node name="Dialog Text" type="RichTextLabel" parent="."]
+z_index = 4
+offset_left = 12117.0
+offset_top = -632.0
+offset_right = 13915.0
+offset_bottom = -69.0
+scale = Vector2(1.0015, 1)
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/bold_italics_font_size = 60
+theme_override_font_sizes/italics_font_size = 60
+theme_override_font_sizes/mono_font_size = 60
+theme_override_font_sizes/normal_font_size = 60
+theme_override_font_sizes/bold_font_size = 60
+bbcode_enabled = true
+text = "Wow...I can't believe we really made it"
+fit_content = true
+
+[node name="Comic Duck" type="AnimatedSprite2D" parent="."]
+z_index = 1
+position = Vector2(11414, -401)
+sprite_frames = ExtResource("5_5xkfs")
+
+[node name="Comic Fish" type="AnimatedSprite2D" parent="."]
+z_index = 1
+position = Vector2(12735, 945)
+sprite_frames = ExtResource("6_lpqbh")
+animation = &"move"
+
+[node name="Water" parent="." instance=ExtResource("7_kogr5")]
+z_index = 2
+position = Vector2(7591, -22)
+scale = Vector2(0.982856, 1.58721)
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Wall" parent="Walls" instance=ExtResource("8_4vnu7")]
+z_index = 1
+position = Vector2(12932, 1901)
+scale = Vector2(1.43789, 1.49316)
+
+[node name="Wall2" parent="Walls" instance=ExtResource("8_4vnu7")]
+z_index = 1
+position = Vector2(11977, 1946)
+scale = Vector2(1.43789, 1.49316)
+
+[node name="Wall4" parent="Walls" instance=ExtResource("8_4vnu7")]
+z_index = 1
+position = Vector2(11118, 1935)
+scale = Vector2(1.43789, 1.49316)
+
+[node name="Drain" parent="." instance=ExtResource("10_t6hst")]
+z_index = 1
+position = Vector2(11282, 949)
+rotation = -0.828378
+scale = Vector2(1.72627, 2.32169)
