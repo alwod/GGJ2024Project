@@ -19,6 +19,8 @@ func _on_body_entered(body):
 			rigid_body.set_freeze_enabled(true);
 			rigid_body.set_physics_process(false)
 			rigid_body.set_process(false)
+	if(body.is_in_group("bubble_destoryer")):
+		destroy()
 	
 func _physics_process(delta):
 	position.y -= float_speed
@@ -35,8 +37,7 @@ func _physics_process(delta):
 func float_upwards():
 	pass
 
-
-func _on_timer_timeout():
+func destroy():
 	if bodyCaptured && bodyCaptured is RigidBody2D:
 		var rigid_body: RigidBody2D = bodyCaptured
 		rigid_body.set_freeze_enabled(false)
@@ -44,3 +45,6 @@ func _on_timer_timeout():
 		rigid_body.set_process(true)
 
 	queue_free()
+	
+func _on_timer_timeout():
+	destroy()

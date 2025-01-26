@@ -23,33 +23,33 @@
 
 [node name="Wall" type="Sprite2D" parent="Background"]
 z_index = -1
-position = Vector2(7897, -2275)
+position = Vector2(7897, -1867.48)
 scale = Vector2(7.75041, 5.76315)
 texture = ExtResource("1_cnihc")
 
 [node name="Bathtubleftalt" type="Sprite2D" parent="Background"]
-position = Vector2(3099, -23)
+position = Vector2(3099, 384.52)
 scale = Vector2(1.539, 1.48062)
 texture = ExtResource("2_w486d")
 
 [node name="Bathtubleftalt2" type="Sprite2D" parent="Background"]
-position = Vector2(10848, -25)
+position = Vector2(10848, 382.52)
 scale = Vector2(2, 1.5075)
 texture = ExtResource("2_w486d")
 flip_h = true
 
 [node name="Bathtubright" type="Sprite2D" parent="Background"]
-position = Vector2(11994, -18)
+position = Vector2(11994, 389.52)
 scale = Vector2(1, 1.5125)
 texture = ExtResource("3_85gsv")
 
 [node name="Bathtubmiddle" type="Sprite2D" parent="Background"]
-position = Vector2(6882, -21)
+position = Vector2(6882, 386.52)
 scale = Vector2(6, 1.5)
 texture = ExtResource("4_cnkm0")
 
 [node name="Faucet" type="Sprite2D" parent="Background"]
-position = Vector2(11489, -411)
+position = Vector2(11489, -3.48001)
 scale = Vector2(1.44867, 1.52062)
 texture = ExtResource("5_xkbd4")
 
@@ -228,7 +228,7 @@ scale = Vector2(2.16, 2.16)
 [node name="Objects" type="Node" parent="."]
 
 [node name="FloatingObject" parent="Objects" instance=ExtResource("2_70nj0")]
-position = Vector2(2913, 403)
+position = Vector2(2913, 831)
 
 [node name="CollisionShape2D" parent="Objects/FloatingObject" index="0"]
 position = Vector2(-3.5, -144)
@@ -238,24 +238,24 @@ scale = Vector2(1, 1)
 texture = ExtResource("9_nybm4")
 
 [node name="Drain" parent="Objects" instance=ExtResource("12_oj41i")]
-position = Vector2(12196, 795)
+position = Vector2(12196, 1223)
 scale = Vector2(2, 2)
 
 [node name="BubbleSpawner" parent="Objects" instance=ExtResource("4_snigy")]
-position = Vector2(4464, 6321)
+position = Vector2(3605, 1369)
 spawn_delay = 10.0
 
 [node name="Water" parent="." instance=ExtResource("1_fb3qe")]
 modulate = Color(1, 1, 1, 0.682353)
 z_index = 1
-position = Vector2(1062, -486)
+position = Vector2(1062, -22)
 scale = Vector2(2.22224, 1.20491)
 collision_mask = 7
 
 [node name="Players" type="Node" parent="."]
 
 [node name="Duck" parent="Players" groups=["bubbleable"] instance=ExtResource("3_lo5nj")]
-position = Vector2(1478, -646)
+position = Vector2(1478, -390)
 collision_layer = 2
 collision_mask = 7
 freeze_mode = 1
@@ -263,12 +263,15 @@ move_speed = 2000
 jump_potential = 10
 
 [node name="Fish" parent="Players" groups=["bubbleable"] instance=ExtResource("7_3380c")]
-position = Vector2(1569, -117)
+position = Vector2(1569, 139)
 scale = Vector2(1.016, 1)
+max_speed = 1000
+acceleration = 4000
+push_force = 1000
 force_out_of_water = 15
 
 [node name="DuckBoundary" parent="Players" instance=ExtResource("4_k5c8s")]
-position = Vector2(1679, -423)
+position = Vector2(1679, 9)
 scale = Vector2(7.88, 1)
 
 [node name="Camera2D" type="Camera2D" parent="Players" node_paths=PackedStringArray("fish", "duck")]

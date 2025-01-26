@@ -4,13 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://pi65gxobmntb" path="res://Scenes/bubble.tscn" id="2_gue4r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_waowy"]
-size = Vector2(3589, 340)
+size = Vector2(2108, 177)
 
 [node name="BubbleSpawner" type="Area2D"]
 script = ExtResource("1_r0je4")
 bubble = ExtResource("2_gue4r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -88)
 shape = SubResource("RectangleShape2D_waowy")
 
 [node name="Timer" type="Timer" parent="."]

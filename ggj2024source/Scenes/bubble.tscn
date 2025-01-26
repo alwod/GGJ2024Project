@@ -38,7 +38,8 @@ modulate = Color(1, 1, 1, 0.490196)
 script = ExtResource("1_fvtdo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(3.16, 3.16)
+position = Vector2(0.138855, -129.753)
+scale = Vector2(1.14816, 1.14816)
 shape = SubResource("CircleShape2D_pif5m")
 
 [node name="Timer" type="Timer" parent="."]
@@ -46,8 +47,8 @@ wait_time = 10.0
 autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-4.76837e-07, 0)
-scale = Vector2(1.56324, 1.56324)
+position = Vector2(0.138855, -129.753)
+scale = Vector2(0.327518, 0.327518)
 sprite_frames = SubResource("SpriteFrames_v4gr4")
 autoplay = "default"
 frame_progress = 0.0147856
