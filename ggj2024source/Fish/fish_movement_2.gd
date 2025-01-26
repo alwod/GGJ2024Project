@@ -42,7 +42,8 @@ func player_movement(delta):
 		var c = get_slide_collision(i)
 		if c.get_collider() is RigidBody2D:
 			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
-
+		if c.get_collider() is CharacterBody2D:
+			c.get_collider().velocity += -c.get_normal() * push_force
 
 func _physics_process(delta: float) -> void:
 	player_movement(delta)
