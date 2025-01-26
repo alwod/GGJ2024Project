@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://c84w35qxnrst5"]
+[gd_scene load_steps=3 format=3 uid="uid://dxigoj5nf7603"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/main_menu.gd" id="1_nfwik"]
 [ext_resource type="Texture2D" uid="uid://cq584o2gi8lg" path="res://Art/menus/SplashPage.png" id="2_y3plr"]
@@ -42,4 +42,34 @@ offset_bottom = 290.0
 theme_override_font_sizes/font_size = 40
 text = "Start Game"
 
+[node name="Quit Button" type="Button" parent="Control2"]
+layout_mode = 2
+offset_left = 866.0
+offset_top = 305.0
+offset_right = 1092.0
+offset_bottom = 368.0
+theme_override_font_sizes/font_size = 40
+text = "Exit"
+
+[node name="HSlider" type="HSlider" parent="Control2"]
+layout_mode = 0
+offset_left = 881.0
+offset_top = 389.0
+offset_right = 1080.0
+offset_bottom = 414.0
+value = 100.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control2"]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 369.0
+offset_right = 1049.0
+offset_bottom = 397.0
+theme_override_colors/default_color = Color(0.180005, 0.180005, 0.180005, 1)
+text = "Master Volume"
+
 [connection signal="pressed" from="Control2/Start Game Button" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="Control2/Quit Button" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="Control2/Quit Button" to="." method="_on_quit_button_pressed"]
+[connection signal="drag_ended" from="Control2/HSlider" to="." method="_on_h_slider_drag_ended"]
+[connection signal="value_changed" from="Control2/HSlider" to="." method="_on_h_slider_value_changed"]
