@@ -190,6 +190,8 @@ autoplay = true
 bus = &"BGM1"
 playback_type = 1
 
-[node name="Cat" parent="." instance=ExtResource("14_6tbas")]
+[node name="Cat" parent="." node_paths=PackedStringArray("duck", "fish") instance=ExtResource("14_6tbas")]
 position = Vector2(3277, 630)
 scale = Vector2(11.39, 11.39)
+duck = NodePath("../Players/Duck")
+fish = NodePath("../Players/Fish")
