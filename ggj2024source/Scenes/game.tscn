@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://g7vnpycvryao" path="res://Art/bathroom/boat.png" id="9_nybm4"]
 [ext_resource type="Texture2D" uid="uid://1ndpnb8kq86t" path="res://Art/bathroom/sponge.png" id="9_sluua"]
 [ext_resource type="PackedScene" uid="uid://d2etyhfvt5fgr" path="res://Scenes/wall.tscn" id="10_xsesx"]
-[ext_resource type="PackedScene" path="res://Scenes/floating_object2.tscn" id="11_6a8nn"]
+[ext_resource type="PackedScene" uid="uid://bs526o11vwoem" path="res://Scenes/floating_object2.tscn" id="11_6a8nn"]
 [ext_resource type="PackedScene" uid="uid://urc28gjxlce5" path="res://Drain/drain.tscn" id="12_oj41i"]
 [ext_resource type="PackedScene" uid="uid://rpa5gadfh2jr" path="res://Scenes/duck2.tscn" id="16_n5tly"]
 [ext_resource type="PackedScene" uid="uid://gu63e0fee7jj" path="res://Scenes/cat.tscn" id="19_61lxv"]
@@ -258,7 +258,7 @@ rotation = 15.7452
 scale = Vector2(1.17033, 1.17033)
 
 [node name="Wall47" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(14874, -123)
+position = Vector2(14748, -123)
 rotation = 15.7452
 scale = Vector2(0.888702, 0.888702)
 
@@ -308,8 +308,13 @@ rotation = 13.0365
 scale = Vector2(0.447962, 0.465054)
 
 [node name="Wall58" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(15225, 134)
-rotation = 14.0323
+position = Vector2(15235, 272)
+rotation = 13.1323
+scale = Vector2(0.447962, 0.465054)
+
+[node name="Wall107" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(15683, -637)
+rotation = 13.1323
 scale = Vector2(0.447962, 0.465054)
 
 [node name="Wall50" parent="Walls" instance=ExtResource("10_xsesx")]
@@ -696,6 +701,18 @@ shape = SubResource("RectangleShape2D_mxcex")
 scale = Vector2(-0.560876, -0.560876)
 texture = ExtResource("9_dhhpb")
 
+[node name="Steve4" parent="Objects" instance=ExtResource("2_70nj0")]
+position = Vector2(15481, -8)
+
+[node name="CollisionShape2D" parent="Objects/Steve4" index="0"]
+position = Vector2(5, -123.5)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_mxcex")
+
+[node name="Sprite2D" parent="Objects/Steve4" index="1"]
+scale = Vector2(-0.560876, -0.560876)
+texture = ExtResource("9_dhhpb")
+
 [node name="Steve2" parent="Objects" instance=ExtResource("2_70nj0")]
 position = Vector2(4384, 1328)
 
@@ -707,12 +724,6 @@ shape = SubResource("RectangleShape2D_mxcex")
 [node name="Sprite2D" parent="Objects/Steve2" index="1"]
 scale = Vector2(-0.560876, -0.560876)
 texture = ExtResource("9_dhhpb")
-
-[node name="FloatingObject" parent="Objects" instance=ExtResource("11_6a8nn")]
-position = Vector2(10032, -291)
-
-[node name="FloatingObject2" parent="Objects" instance=ExtResource("11_6a8nn")]
-position = Vector2(10832, -228)
 
 [node name="FloatingObject6" parent="Objects" instance=ExtResource("11_6a8nn")]
 position = Vector2(23865, 89)
@@ -732,14 +743,30 @@ position = Vector2(33588, -185)
 [node name="FloatingObject11" parent="Objects" instance=ExtResource("11_6a8nn")]
 position = Vector2(36039, -520)
 
-[node name="FloatingObject3" parent="Objects" instance=ExtResource("11_6a8nn")]
-position = Vector2(11369, -208)
-
 [node name="FloatingObject5" parent="Objects" instance=ExtResource("11_6a8nn")]
 position = Vector2(13385, -823)
 
 [node name="FloatingObject4" parent="Objects" instance=ExtResource("11_6a8nn")]
 position = Vector2(9353, -308)
+rotation = 0.00876552
+
+[node name="CollisionShape2D" parent="Objects/FloatingObject4" index="0"]
+position = Vector2(11.2461, -143.104)
+scale = Vector2(0.21826, 0.21826)
+
+[node name="Sprite2D" parent="Objects/FloatingObject4" index="1"]
+scale = Vector2(1.503, -1.41159)
+
+[node name="FloatingObject12" parent="Objects" instance=ExtResource("11_6a8nn")]
+position = Vector2(10175, -316)
+rotation = 0.00876552
+
+[node name="CollisionShape2D" parent="Objects/FloatingObject12" index="0"]
+position = Vector2(11.2461, -143.104)
+scale = Vector2(0.21826, 0.21826)
+
+[node name="Sprite2D" parent="Objects/FloatingObject12" index="1"]
+scale = Vector2(1.503, -1.41159)
 
 [node name="Drain" parent="Objects" instance=ExtResource("12_oj41i")]
 position = Vector2(39597, 1146)
@@ -771,6 +798,7 @@ position = Vector2(26817, 1814)
 spawn_delay = 3.0
 
 [node name="Water" parent="." instance=ExtResource("1_fb3qe")]
+visible = false
 modulate = Color(1, 1, 1, 0.682353)
 z_index = 1
 position = Vector2(1062, -33)
@@ -874,4 +902,7 @@ texture = ExtResource("26_qqi65")
 [editable path="Objects/Boat4"]
 [editable path="Objects/Steve"]
 [editable path="Objects/Steve3"]
+[editable path="Objects/Steve4"]
 [editable path="Objects/Steve2"]
+[editable path="Objects/FloatingObject4"]
+[editable path="Objects/FloatingObject12"]
