@@ -51,10 +51,16 @@ func reset_paw():
 
 func move_paw():
 	var i = randi_range(0, 1)
-	if i == 0 && fish_is_in:
+	if fish_is_in && !duck_is_in:
 		player_position = fish.global_position
-	elif i == 1 && duck_is_in:
+	elif duck_is_in && !fish_is_in:
 		player_position = duck.global_position
+	else:
+		if i == 0:
+			player_position = fish.global_position
+		else:
+			player_position = duck.global_position
+	
 	cat_paw.global_position = player_position
 	cat_paw.global_position.y -= spawn_distance_from_player
 	cat_paw.visible = true
@@ -65,7 +71,7 @@ func _on_cat_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("fish") || body.is_in_group("duck"):
 		if body.is_in_group("fish"):
 			fish_is_in = true
-		else:
+		elif body.is_in_group("duck"):
 			duck_is_in = true
 		move_paw()
 
