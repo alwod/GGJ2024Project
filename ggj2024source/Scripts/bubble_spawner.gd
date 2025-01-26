@@ -23,5 +23,4 @@ func spawn_bubble():
 
 
 func _on_timer_timeout():
-	print("bubble spawned")
 	spawn_bubble()

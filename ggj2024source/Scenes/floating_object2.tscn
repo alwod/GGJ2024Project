@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs526o11vwoem"]
+
+[ext_resource type="Script" path="res://Scripts/Floating/floatable_body_2d.gd" id="1_2kalj"]
+[ext_resource type="Texture2D" uid="uid://cgn8xcjydxe7c" path="res://Art/bathroom/steve.png" id="2_2ekva"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6gun"]
+size = Vector2(1594.43, 1241.64)
+
+[node name="FloatingObject" type="RigidBody2D"]
+script = ExtResource("1_2kalj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.65997, -140)
+scale = Vector2(0.21826, 0.21826)
+shape = SubResource("RectangleShape2D_x6gun")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.991392, 0.374572, 0.545636, 1)
+position = Vector2(9.66, -117.5)
+scale = Vector2(0.777062, -0.648438)
+texture = ExtResource("2_2ekva")
