@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1ndpnb8kq86t"
-path="res://.godot/imported/sponge.png-834684420fc4b411d69a20cd57ff4087.ctex"
+uid="uid://cemgu5t7ccjjb"
+path="res://.godot/imported/chain.png-49fbdd5d8445c14452c6a2e5d06cf2d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/bathroom/sponge.png"
-dest_files=["res://.godot/imported/sponge.png-834684420fc4b411d69a20cd57ff4087.ctex"]
+source_file="res://Art/bathroom/chain.png"
+dest_files=["res://.godot/imported/chain.png-49fbdd5d8445c14452c6a2e5d06cf2d1.ctex"]
 
 [params]
 

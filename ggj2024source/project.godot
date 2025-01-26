@@ -32,6 +32,7 @@ project/assembly_name="GGJ2024Source"
 [global_group]
 
 bubble_destoyer=""
+bubbleable=""
 
 [input]
 
