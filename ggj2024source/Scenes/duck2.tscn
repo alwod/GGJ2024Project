@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b47eykl4pekws"]
+[gd_scene load_steps=8 format=3 uid="uid://b47eykl4pekws"]
 
 [ext_resource type="Script" path="res://Scripts/duck_2.gd" id="1_vr8fi"]
 [ext_resource type="SpriteFrames" uid="uid://bok3vd63yqvvh" path="res://Art/animation frames/duck2.tres" id="2_onx83"]

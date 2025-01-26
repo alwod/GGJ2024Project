@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b2bg1mrdklivf"]
+[gd_scene load_steps=15 format=3 uid="uid://b2bg1mrdklivf"]
 
 [ext_resource type="Script" path="res://Scripts/bubble.gd" id="1_fvtdo"]
 [ext_resource type="Texture2D" uid="uid://b7ru6o6dh5lab" path="res://Art/bubble/Bubble_1.png" id="2_fmekq"]
@@ -8,11 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bcsxjefau66ro" path="res://Art/bubble/Bubble_3.png" id="4_fppx2"]
 [ext_resource type="Texture2D" uid="uid://bsuoj6ubmidq8" path="res://Art/bubble/Bubble_4.png" id="5_nxhra"]
 [ext_resource type="AudioStream" uid="uid://baxmnhotwqyqq" path="res://Audio/Bubble 3.wav" id="5_xjn7n"]
-[ext_resource type="Texture2D" uid="uid://da665mvxbbsr6" path="res://Art/bubble/Bubble_5.png" id="6_c0gmw"]
-[ext_resource type="AudioStream" uid="uid://8dnxldqq1bfv" path="res://Audio/Bubble.wav" id="3_eck0h"]
-[ext_resource type="AudioStream" uid="uid://dm5d1s4dj6la3" path="res://Audio/Bubble 2.wav" id="4_btfm5"]
-[ext_resource type="AudioStream" uid="uid://baxmnhotwqyqq" path="res://Audio/Bubble 3.wav" id="5_xjn7n"]
 [ext_resource type="Script" path="res://Scenes/bubble_impact.gd" id="6_b03cl"]
+[ext_resource type="Texture2D" uid="uid://da665mvxbbsr6" path="res://Art/bubble/Bubble_5.png" id="6_c0gmw"]
 [ext_resource type="AudioStream" uid="uid://cid677o6mu3b8" path="res://Audio/Bubble 4.wav" id="10_7ln61"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pif5m"]
