@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dxgm0hy4ay6le"]
+[gd_scene load_steps=30 format=3 uid="uid://dxgm0hy4ay6le"]
 
 [ext_resource type="Texture2D" uid="uid://dmhuiln1x2pul" path="res://Art/bathroom/wall.png" id="1_cnihc"]
 [ext_resource type="PackedScene" uid="uid://bpr51htjut4js" path="res://Scenes/water.tscn" id="1_fb3qe"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/duck_boundary.tscn" id="4_k5c8s"]
 [ext_resource type="PackedScene" uid="uid://cd43gxqdw2o1g" path="res://Scenes/bubble_spawner.tscn" id="4_snigy"]
 [ext_resource type="Texture2D" uid="uid://dn6okkgsiaw0w" path="res://Art/bathroom/faucet.png" id="5_xkbd4"]
+[ext_resource type="PackedScene" uid="uid://cqgkvjkp8crwh" path="res://Scenes/floating_object3.tscn" id="6_46n4y"]
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="6_cjvb0"]
 [ext_resource type="PackedScene" uid="uid://dprtvh6v4tbjh" path="res://Fish/fish.tscn" id="7_3380c"]
 [ext_resource type="AudioStream" uid="uid://cgax84py243vn" path="res://Audio/BGM1.wav" id="7_beach"]
@@ -48,8 +49,8 @@ scale = Vector2(7.75041, 5.76315)
 texture = ExtResource("1_cnihc")
 
 [node name="Bathtubleftalt" type="Sprite2D" parent="Background"]
-position = Vector2(3049, 329)
-scale = Vector2(1.539, 1.48062)
+position = Vector2(3120, 489)
+scale = Vector2(1.539, 1.85047)
 texture = ExtResource("2_w486d")
 
 [node name="Bathtubleftalt2" type="Sprite2D" parent="Background"]
@@ -72,6 +73,12 @@ texture = ExtResource("4_cnkm0")
 position = Vector2(37972, -24)
 scale = Vector2(1.44867, 1.52062)
 texture = ExtResource("5_xkbd4")
+
+[node name="FloatingObject" parent="Background" instance=ExtResource("6_46n4y")]
+position = Vector2(9497, -372)
+
+[node name="FloatingObject2" parent="Background" instance=ExtResource("6_46n4y")]
+position = Vector2(10419, -365)
 
 [node name="Walls" type="Node" parent="."]
 
@@ -248,7 +255,7 @@ rotation = 14.268
 scale = Vector2(1.17033, 1.17033)
 
 [node name="Wall35" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(12214, -730)
+position = Vector2(12195, -817)
 rotation = 15.7452
 scale = Vector2(1.17033, 1.17033)
 
@@ -263,7 +270,7 @@ rotation = 15.7452
 scale = Vector2(0.888702, 0.888702)
 
 [node name="Wall48" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(15992, -473)
+position = Vector2(15996, -361)
 rotation = 15.7452
 scale = Vector2(0.888702, 0.888702)
 
@@ -283,7 +290,7 @@ rotation = 16.4036
 scale = Vector2(0.447962, 0.465054)
 
 [node name="Wall53" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(16138, -650)
+position = Vector2(16129, -533)
 rotation = 15.5611
 scale = Vector2(0.447962, 0.465054)
 
@@ -308,23 +315,18 @@ rotation = 13.0365
 scale = Vector2(0.447962, 0.465054)
 
 [node name="Wall58" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(15235, 272)
+position = Vector2(15058, 313.999)
 rotation = 13.1323
+scale = Vector2(0.447962, 0.465054)
+
+[node name="Wall110" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(14219, 117)
+rotation = 13.943
 scale = Vector2(0.447962, 0.465054)
 
 [node name="Wall107" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(15358, -656.001)
+position = Vector2(15352, -609)
 rotation = 13.1323
-scale = Vector2(0.447962, 0.465054)
-
-[node name="Wall108" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(16831, -546)
-rotation = 12.0775
-scale = Vector2(0.447962, 0.465054)
-
-[node name="Wall109" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(18123, -554.001)
-rotation = 12.7822
 scale = Vector2(0.447962, 0.465054)
 
 [node name="Wall50" parent="Walls" instance=ExtResource("10_xsesx")]
@@ -336,6 +338,26 @@ scale = Vector2(0.888702, 0.888702)
 position = Vector2(18553, -895)
 rotation = 15.7452
 scale = Vector2(0.888702, 0.888702)
+
+[node name="Wall111" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(19973, -910)
+rotation = 15.7452
+scale = Vector2(0.888702, 0.888702)
+
+[node name="Wall112" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(20145, -1122)
+rotation = 15.7136
+scale = Vector2(0.485468, 0.485468)
+
+[node name="Wall113" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(19513, -739)
+rotation = 15.7136
+scale = Vector2(0.485468, 0.485468)
+
+[node name="Wall114" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(20226, -624.998)
+rotation = 16.374
+scale = Vector2(0.853611, 0.853611)
 
 [node name="Wall60" parent="Walls" instance=ExtResource("10_xsesx")]
 position = Vector2(21014, -867)
@@ -450,6 +472,16 @@ scale = Vector2(1.49405, 1.49405)
 [node name="Wall37" parent="Walls" instance=ExtResource("10_xsesx")]
 position = Vector2(13585, 654)
 rotation = 17.3395
+scale = Vector2(1.17033, 1.17033)
+
+[node name="Wall108" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(14018, -489.999)
+rotation = 16.233
+scale = Vector2(1.17033, 1.17033)
+
+[node name="Wall109" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(14605, 620)
+rotation = 17.3377
 scale = Vector2(1.17033, 1.17033)
 
 [node name="Wall39" parent="Walls" instance=ExtResource("10_xsesx")]
@@ -711,18 +743,6 @@ shape = SubResource("RectangleShape2D_mxcex")
 scale = Vector2(-0.560876, -0.560876)
 texture = ExtResource("9_dhhpb")
 
-[node name="Steve4" parent="Objects" instance=ExtResource("2_70nj0")]
-position = Vector2(15481, -8)
-
-[node name="CollisionShape2D" parent="Objects/Steve4" index="0"]
-position = Vector2(5, -123.5)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_mxcex")
-
-[node name="Sprite2D" parent="Objects/Steve4" index="1"]
-scale = Vector2(-0.560876, -0.560876)
-texture = ExtResource("9_dhhpb")
-
 [node name="Steve2" parent="Objects" instance=ExtResource("2_70nj0")]
 position = Vector2(4384, 1328)
 
@@ -735,48 +755,44 @@ shape = SubResource("RectangleShape2D_mxcex")
 scale = Vector2(-0.560876, -0.560876)
 texture = ExtResource("9_dhhpb")
 
+[node name="FloatingObject6" parent="Objects" instance=ExtResource("11_6a8nn")]
+position = Vector2(23865, 89)
+
+[node name="FloatingObject7" parent="Objects" instance=ExtResource("11_6a8nn")]
+position = Vector2(25285, 225)
+
 [node name="FloatingObject8" parent="Objects" instance=ExtResource("11_6a8nn")]
 position = Vector2(27203, -2)
 
-[node name="Sprite2D" parent="Objects/FloatingObject8" index="1"]
-position = Vector2(21.9997, -117)
-scale = Vector2(1.44713, -1.37266)
-
 [node name="FloatingObject9" parent="Objects" instance=ExtResource("11_6a8nn")]
-position = Vector2(30236, 813)
-
-[node name="Sprite2D" parent="Objects/FloatingObject9" index="1"]
-position = Vector2(21.9997, -117)
-scale = Vector2(1.44713, -1.37266)
+position = Vector2(31436, -627)
 
 [node name="FloatingObject10" parent="Objects" instance=ExtResource("11_6a8nn")]
-position = Vector2(33781, 130)
+position = Vector2(33588, -185)
 
-[node name="Sprite2D" parent="Objects/FloatingObject10" index="1"]
-position = Vector2(21.9997, -117)
-scale = Vector2(1.44713, -1.37266)
-
-[node name="FloatingObject4" parent="Objects" instance=ExtResource("11_6a8nn")]
-position = Vector2(9353, -308)
-rotation = 0.00876552
-
-[node name="CollisionShape2D" parent="Objects/FloatingObject4" index="0"]
-position = Vector2(11.2461, -143.104)
-scale = Vector2(0.21826, 0.21826)
-
-[node name="Sprite2D" parent="Objects/FloatingObject4" index="1"]
-scale = Vector2(1.503, -1.41159)
+[node name="FloatingObject11" parent="Objects" instance=ExtResource("11_6a8nn")]
+position = Vector2(36039, -520)
 
 [node name="FloatingObject12" parent="Objects" instance=ExtResource("11_6a8nn")]
-position = Vector2(10175, -316)
-rotation = 0.00876552
+position = Vector2(15662, 589)
 
-[node name="CollisionShape2D" parent="Objects/FloatingObject12" index="0"]
-position = Vector2(11.2461, -143.104)
-scale = Vector2(0.21826, 0.21826)
+[node name="FloatingObject13" parent="Objects" instance=ExtResource("11_6a8nn")]
+position = Vector2(14863, 1307)
 
-[node name="Sprite2D" parent="Objects/FloatingObject12" index="1"]
-scale = Vector2(1.503, -1.41159)
+[node name="FloatingObject14" parent="Objects" instance=ExtResource("11_6a8nn")]
+position = Vector2(17341, 1262)
+
+[node name="FloatingObject15" parent="Objects" instance=ExtResource("11_6a8nn")]
+position = Vector2(16736, 808)
+
+[node name="FloatingObject19" parent="Objects" instance=ExtResource("11_6a8nn")]
+position = Vector2(17230, 92)
+
+[node name="FloatingObject21" parent="Objects" instance=ExtResource("11_6a8nn")]
+position = Vector2(19548, 92)
+
+[node name="FloatingObject23" parent="Objects" instance=ExtResource("11_6a8nn")]
+position = Vector2(16081, 1342)
 
 [node name="Drain" parent="Objects" instance=ExtResource("12_oj41i")]
 position = Vector2(39597, 1146)
@@ -787,25 +803,21 @@ rise_to_level = 700
 position = Vector2(6199, 1566)
 spawn_delay = 4.0
 
-[node name="BubbleSpawner2" parent="Objects" instance=ExtResource("4_snigy")]
-position = Vector2(12455, 2582)
-spawn_delay = 4.0
-
 [node name="BubbleSpawner3" parent="Objects" instance=ExtResource("4_snigy")]
-position = Vector2(18350, 363)
+position = Vector2(18312, 2903)
 spawn_delay = 4.0
 
 [node name="BubbleSpawner4" parent="Objects" instance=ExtResource("4_snigy")]
-position = Vector2(22432, 1804)
-spawn_delay = 3.0
+position = Vector2(22309, 5739)
+spawn_delay = 1.5
 
 [node name="BubbleSpawner5" parent="Objects" instance=ExtResource("4_snigy")]
-position = Vector2(24589, 1824)
-spawn_delay = 3.0
+position = Vector2(24466, 5759)
+spawn_delay = 1.5
 
 [node name="BubbleSpawner6" parent="Objects" instance=ExtResource("4_snigy")]
-position = Vector2(26817, 1814)
-spawn_delay = 3.0
+position = Vector2(26694, 5749)
+spawn_delay = 1.5
 
 [node name="Water" parent="." instance=ExtResource("1_fb3qe")]
 visible = false
@@ -833,9 +845,10 @@ scale = Vector2(7.88, 1)
 position = Vector2(1937, -74)
 
 [node name="Camera2D" type="Camera2D" parent="Players" node_paths=PackedStringArray("fish", "duck")]
-position = Vector2(1237, -1085)
+position = Vector2(1984, 752)
 zoom = Vector2(0.12, 0.12)
-limit_bottom = 5500
+limit_left = 500
+limit_bottom = 1600
 position_smoothing_enabled = true
 script = ExtResource("6_cjvb0")
 fish = NodePath("../Fish")
@@ -875,33 +888,33 @@ duck = NodePath("../../Players/Duck")
 fish = NodePath("../../Players/Fish")
 
 [node name="Cat1" type="Sprite2D" parent="."]
-position = Vector2(5002, -1945)
-scale = Vector2(5.45964, 5.45964)
+position = Vector2(5419, -2602)
+scale = Vector2(5.14751, 5.14751)
 texture = ExtResource("21_cmliw")
 
 [node name="Cat2" type="Sprite2D" parent="."]
-position = Vector2(17139, -2558)
-scale = Vector2(6.83211, 6.83211)
+position = Vector2(19625, -2764)
+scale = Vector2(5.33699, 5.33699)
 texture = ExtResource("22_4re2f")
 
 [node name="Cat3" type="Sprite2D" parent="."]
-position = Vector2(11060, -2434)
-scale = Vector2(5.09515, 5.09515)
+position = Vector2(12132, -2600)
+scale = Vector2(5.0566, 5.0566)
 texture = ExtResource("23_nmipo")
 
 [node name="Cat4" type="Sprite2D" parent="."]
-position = Vector2(22926, -3318)
-scale = Vector2(5.63464, 5.63464)
+position = Vector2(25341, -3402)
+scale = Vector2(5.16064, 5.16064)
 texture = ExtResource("24_1k5q8")
 
 [node name="Cat5" type="Sprite2D" parent="."]
-position = Vector2(31256, -2878)
-scale = Vector2(6.14878, 6.14878)
+position = Vector2(31415, -2474)
+scale = Vector2(4.40251, 4.40251)
 texture = ExtResource("25_nb8dp")
 
 [node name="Cat6" type="Sprite2D" parent="."]
-position = Vector2(36823, -2828)
-scale = Vector2(6.10427, 6.10427)
+position = Vector2(37604, -2509)
+scale = Vector2(5.08707, 5.08707)
 texture = ExtResource("26_qqi65")
 
 [editable path="Objects/Boat"]
@@ -912,10 +925,4 @@ texture = ExtResource("26_qqi65")
 [editable path="Objects/Boat4"]
 [editable path="Objects/Steve"]
 [editable path="Objects/Steve3"]
-[editable path="Objects/Steve4"]
 [editable path="Objects/Steve2"]
-[editable path="Objects/FloatingObject8"]
-[editable path="Objects/FloatingObject9"]
-[editable path="Objects/FloatingObject10"]
-[editable path="Objects/FloatingObject4"]
-[editable path="Objects/FloatingObject12"]
