@@ -313,8 +313,18 @@ rotation = 13.1323
 scale = Vector2(0.447962, 0.465054)
 
 [node name="Wall107" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(15683, -637)
+position = Vector2(15358, -656.001)
 rotation = 13.1323
+scale = Vector2(0.447962, 0.465054)
+
+[node name="Wall108" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(16831, -546)
+rotation = 12.0775
+scale = Vector2(0.447962, 0.465054)
+
+[node name="Wall109" parent="Walls" instance=ExtResource("10_xsesx")]
+position = Vector2(18123, -554.001)
+rotation = 12.7822
 scale = Vector2(0.447962, 0.465054)
 
 [node name="Wall50" parent="Walls" instance=ExtResource("10_xsesx")]
@@ -725,12 +735,6 @@ shape = SubResource("RectangleShape2D_mxcex")
 scale = Vector2(-0.560876, -0.560876)
 texture = ExtResource("9_dhhpb")
 
-[node name="FloatingObject6" parent="Objects" instance=ExtResource("11_6a8nn")]
-position = Vector2(23865, 89)
-
-[node name="FloatingObject7" parent="Objects" instance=ExtResource("11_6a8nn")]
-position = Vector2(25285, 225)
-
 [node name="FloatingObject8" parent="Objects" instance=ExtResource("11_6a8nn")]
 position = Vector2(27203, -2)
 
@@ -742,9 +746,6 @@ position = Vector2(33588, -185)
 
 [node name="FloatingObject11" parent="Objects" instance=ExtResource("11_6a8nn")]
 position = Vector2(36039, -520)
-
-[node name="FloatingObject5" parent="Objects" instance=ExtResource("11_6a8nn")]
-position = Vector2(13385, -823)
 
 [node name="FloatingObject4" parent="Objects" instance=ExtResource("11_6a8nn")]
 position = Vector2(9353, -308)
