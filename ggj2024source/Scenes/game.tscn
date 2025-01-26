@@ -789,7 +789,7 @@ force_out_of_water = 15
 position = Vector2(-25441, -66)
 scale = Vector2(7.88, 1)
 
-[node name="Duck" parent="Players" instance=ExtResource("16_n5tly")]
+[node name="Duck" parent="Players" groups=["bubbleable"] instance=ExtResource("16_n5tly")]
 position = Vector2(1778, -87)
 
 [node name="Camera2D" type="Camera2D" parent="Players" node_paths=PackedStringArray("fish", "duck")]
