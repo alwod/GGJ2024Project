@@ -11,13 +11,18 @@ config_version=5
 [application]
 
 config/name="GGJ2024Source"
-run/main_scene="res://Scenes/game.tscn"
+run/main_scene="res://Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [audio]
 
 buses/default_bus_layout="res://Audio/default_bus_layout.tres"
+
+[display]
+
+window/size/viewport_height=748
+window/stretch/mode="viewport"
 
 [dotnet]
 
