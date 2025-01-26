@@ -21,6 +21,11 @@ func flip_fish():
 	if Input.is_action_just_pressed("fish_move_left"):
 		$AnimatedSprite2D.flip_h = false;
 		
+	if Input.is_action_just_pressed("fish_move_left"):
+		$FishMove.play()
+			
+	if Input.is_action_just_pressed("fish_move_right"):
+		$FishMove.play()
 
 func player_movement(delta):
 	input = get_input()

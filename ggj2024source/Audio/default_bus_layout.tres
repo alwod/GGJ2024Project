@@ -1,11 +1,33 @@
-[gd_resource type="AudioBusLayout" format=3 uid="uid://d4ktxo62v550m"]
+[gd_resource type="AudioBusLayout" load_steps=4 format=3 uid="uid://d4ktxo62v550m"]
+
+[sub_resource type="AudioEffectEQ6" id="AudioEffectEQ6_d0t2n"]
+resource_name = "EQ6"
+band_db/320_hz = 2.8
+band_db/1000_hz = -5.0
+band_db/3200_hz = -9.2
+band_db/10000_hz = -13.3
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_58ai4"]
+resource_name = "LowPassFilter"
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_n46dg"]
+resource_name = "Reverb"
+predelay_msec = 90.0
+predelay_feedback = 0.21
+room_size = 0.05
+damping = 0.35
+spread = 0.22
+hipass = 0.03
+dry = 0.18
+wet = 0.46
 
 [resource]
+bus/0/volume_db = 2.44924
 bus/1/name = &"BGM1"
 bus/1/solo = false
-bus/1/mute = true
+bus/1/mute = false
 bus/1/bypass_fx = false
-bus/1/volume_db = -4.76812
+bus/1/volume_db = -9.63761
 bus/1/send = &"Master"
 bus/2/name = &"BubbleImpact"
 bus/2/solo = false
@@ -13,3 +35,27 @@ bus/2/mute = false
 bus/2/bypass_fx = false
 bus/2/volume_db = 1.85375
 bus/2/send = &"Master"
+bus/3/name = &"Squeak"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = -1.32149
+bus/3/send = &"Master"
+bus/4/name = &"DuckMove"
+bus/4/solo = false
+bus/4/mute = false
+bus/4/bypass_fx = false
+bus/4/volume_db = -6.57885
+bus/4/send = &"Master"
+bus/4/effect/0/effect = SubResource("AudioEffectEQ6_d0t2n")
+bus/4/effect/0/enabled = true
+bus/5/name = &"FishMove"
+bus/5/solo = false
+bus/5/mute = false
+bus/5/bypass_fx = false
+bus/5/volume_db = 1.85375
+bus/5/send = &"Master"
+bus/5/effect/0/effect = SubResource("AudioEffectLowPassFilter_58ai4")
+bus/5/effect/0/enabled = true
+bus/5/effect/1/effect = SubResource("AudioEffectReverb_n46dg")
+bus/5/effect/1/enabled = false
