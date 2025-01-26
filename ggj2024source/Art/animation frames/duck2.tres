@@ -1,0 +1,34 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://bok3vd63yqvvh"]
+
+[ext_resource type="Texture2D" uid="uid://cghamlyk4iobk" path="res://Art/duck/Bub_1.png" id="1_mreju"]
+[ext_resource type="Texture2D" uid="uid://cq6ma6smr5v3c" path="res://Art/duck/Bub_2.png" id="2_3uf4c"]
+[ext_resource type="Texture2D" uid="uid://bodev07pqady" path="res://Art/duck/Bub_3.png" id="3_14ylw"]
+[ext_resource type="Texture2D" uid="uid://byx7bxxiq8bry" path="res://Art/duck/Bub_4.png" id="4_o8j8i"]
+[ext_resource type="Texture2D" uid="uid://hoks3nou1rba" path="res://Art/duck/Bub_5.png" id="5_7as84"]
+[ext_resource type="Texture2D" uid="uid://chn8d1xaasqte" path="res://Art/duck/Bub_6.png" id="6_udefq"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mreju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3uf4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_14ylw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o8j8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7as84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_udefq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

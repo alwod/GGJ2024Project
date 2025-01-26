@@ -62,7 +62,7 @@ texture = ExtResource("5_xkbd4")
 [node name="Walls" type="Node" parent="."]
 
 [node name="Wall" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(1502, 720)
+position = Vector2(1502, 724)
 
 [node name="Wall2" parent="Walls" instance=ExtResource("10_xsesx")]
 position = Vector2(2213, 304)
