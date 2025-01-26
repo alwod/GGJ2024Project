@@ -19,3 +19,7 @@ func _process(_delta):
 
 	# if force.x != 0 || force.y != 0:
 	apply_force(force)
+	
+	
+
+		

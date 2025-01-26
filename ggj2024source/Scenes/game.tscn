@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b5spf2dn1ciu7" path="res://Scenes/duck.tscn" id="3_lo5nj"]
 [ext_resource type="PackedScene" uid="uid://jhfg7xuqtwje" path="res://Scenes/duck_boundary.tscn" id="4_k5c8s"]
 [ext_resource type="PackedScene" uid="uid://dt0h6dhdphaqe" path="res://Scenes/bubble_spawner.tscn" id="4_snigy"]
-[ext_resource type="AudioStream" uid="uid://cgax84py243vn" path="res://BGM1.wav" id="7_beach"]
+[ext_resource type="AudioStream" uid="uid://cgax84py243vn" path="res://Audio/BGM1.wav" id="7_beach"]
 
 [node name="Game" type="Node2D"]
 
@@ -38,7 +38,7 @@ scale = Vector2(2.44, 2.44)
 position = Vector2(-1388, -153)
 scale = Vector2(8.35595, 4.40239)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Bgm1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_beach")
 autoplay = true
 bus = &"BGM1"
