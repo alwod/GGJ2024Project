@@ -4,18 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://tfnaj05vm83t" path="res://Art/bathroom/waterback.png" id="2_0ht6b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oahvy"]
-size = Vector2(1212, 523.5)
+size = Vector2(6001.5, 1344)
 
 [node name="Water" type="Area2D"]
 script = ExtResource("1_8erfc")
 
 [node name="Collision2D" type="CollisionShape2D" parent="."]
-position = Vector2(606, 289.75)
+position = Vector2(3003.25, 699)
 shape = SubResource("RectangleShape2D_oahvy")
 
 [node name="Waterback" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.478431)
-position = Vector2(614, 645)
+position = Vector2(3006, 1601)
 rotation = -3.14159
-scale = Vector2(0.410667, 0.785)
+scale = Vector2(2, 2)
 texture = ExtResource("2_0ht6b")

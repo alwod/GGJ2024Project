@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Floating/floatable_body_2d.gd" id="1_7e258"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6gun"]
-size = Vector2(1144, 1021)
+size = Vector2(1075.99, 968.67)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sg61p"]
 
@@ -11,11 +11,12 @@ size = Vector2(1144, 1021)
 script = ExtResource("1_7e258")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -3)
+position = Vector2(5.57775, -107.711)
+scale = Vector2(0.21826, 0.21826)
 shape = SubResource("RectangleShape2D_x6gun")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.991392, 0.374572, 0.545636, 1)
-position = Vector2(-3.09628, -2.16449)
-scale = Vector2(1142.19, 1014.33)
+position = Vector2(6, -107)
+scale = Vector2(-235.604, -209.229)
 texture = SubResource("PlaceholderTexture2D_sg61p")

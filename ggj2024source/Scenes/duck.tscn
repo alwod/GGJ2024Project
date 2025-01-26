@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://chn8d1xaasqte" path="res://Art/duck/Bub_6.png" id="7_hjmgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_86elp"]
-size = Vector2(14.5304, 36.6181)
+size = Vector2(54.9998, 140.693)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_006kl"]
 animations = [{
@@ -46,12 +46,14 @@ move_speed = null
 jump_potential = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-46, -59)
+position = Vector2(-0.279991, -66.2848)
 rotation = 3.14159
-scale = Vector2(40.4666, 18.6793)
+scale = Vector2(2, 0.924)
 shape = SubResource("RectangleShape2D_86elp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(10.72, -59.0973)
+scale = Vector2(0.210813, 0.211305)
 sprite_frames = SubResource("SpriteFrames_006kl")
 autoplay = "default"
 frame = 2

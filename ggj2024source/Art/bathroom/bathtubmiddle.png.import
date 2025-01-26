@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk2is2kpnuhrt"
-path="res://.godot/imported/bathtub_background.png-dfd3134c3cc6d4caf42244427ed23a57.ctex"
+uid="uid://biqtxl8hdc67c"
+path="res://.godot/imported/bathtubmiddle.png-fbfb31d0cbda94a44cebf135f5c72549.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/bathroom/bathtub_background.png"
-dest_files=["res://.godot/imported/bathtub_background.png-dfd3134c3cc6d4caf42244427ed23a57.ctex"]
+source_file="res://Art/bathroom/bathtubmiddle.png"
+dest_files=["res://.godot/imported/bathtubmiddle.png-fbfb31d0cbda94a44cebf135f5c72549.ctex"]
 
 [params]
 
