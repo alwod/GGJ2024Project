@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bcsxjefau66ro" path="res://Art/bubble/Bubble_3.png" id="4_fppx2"]
 [ext_resource type="Texture2D" uid="uid://bsuoj6ubmidq8" path="res://Art/bubble/Bubble_4.png" id="5_nxhra"]
 [ext_resource type="Texture2D" uid="uid://da665mvxbbsr6" path="res://Art/bubble/Bubble_5.png" id="6_c0gmw"]
+[ext_resource type="AudioStream" uid="uid://8dnxldqq1bfv" path="res://Audio/Bubble.wav" id="3_eck0h"]
+[ext_resource type="AudioStream" uid="uid://dm5d1s4dj6la3" path="res://Audio/Bubble 2.wav" id="4_btfm5"]
+[ext_resource type="AudioStream" uid="uid://baxmnhotwqyqq" path="res://Audio/Bubble 3.wav" id="5_xjn7n"]
+[ext_resource type="Script" path="res://Scenes/bubble_impact.gd" id="6_b03cl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pif5m"]
 radius = 60.7727
@@ -33,6 +37,15 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_wf6pt"]
+random_pitch = 1.5
+random_volume_offset_db = 1.5
+streams_count = 4
+stream_0/stream = ExtResource("3_eck0h")
+stream_1/stream = ExtResource("4_btfm5")
+stream_2/stream = ExtResource("5_xjn7n")
+stream_3/stream = ExtResource("4_btfm5")
+
 [node name="Bubble" type="Area2D"]
 modulate = Color(1, 1, 1, 0.490196)
 script = ExtResource("1_fvtdo")
@@ -52,6 +65,11 @@ scale = Vector2(0.327518, 0.327518)
 sprite_frames = SubResource("SpriteFrames_v4gr4")
 autoplay = "default"
 frame_progress = 0.0147856
+
+[node name="BubbleImpact" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_wf6pt")
+bus = &"BubbleImpact"
+script = ExtResource("6_b03cl")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="ready" from="Timer" to="." method="_on_timer_ready"]

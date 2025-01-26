@@ -854,7 +854,7 @@ rotation = -1.5708
 
 [node name="Audio" type="Node" parent="."]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio"]
+[node name="Bgm1" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("7_beach")
 autoplay = true
 bus = &"BGM1"

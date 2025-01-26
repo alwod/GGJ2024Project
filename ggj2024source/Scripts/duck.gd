@@ -36,3 +36,7 @@ func _process(_delta):
 		apply_impulse(Vector2(0, jump_potential))
 
 	apply_force(force)
+	
+	
+
+		
