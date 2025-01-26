@@ -71,7 +71,7 @@ autoplay = "default"
 frame_progress = 0.0147856
 
 [node name="BubbleImpact" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamRandomizer_wf6pt")
+stream = SubResource("AudioStreamRandomizer_eucr2")
 bus = &"BubbleImpact"
 script = ExtResource("6_b03cl")
 

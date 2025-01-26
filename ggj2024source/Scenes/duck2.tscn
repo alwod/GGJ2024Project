@@ -40,11 +40,11 @@ frame = 2
 frame_progress = 0.52133
 
 [node name="DuckMove" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamRandomizer_xja4d")
+stream = SubResource("AudioStreamRandomizer_474ta")
 bus = &"DuckMove"
 playback_type = 1
 
 [node name="Squeak" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamRandomizer_mstyj")
+stream = SubResource("AudioStreamRandomizer_lal6f")
 bus = &"Squeak"
 playback_type = 1
