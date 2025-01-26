@@ -13,6 +13,9 @@ var can_move = false
 var move_up = false
 var cat_area_active = false
 
+var fish_is_in = false
+var duck_is_in = false
+
 @onready var cat_paw: StaticBody2D = $CatPaw
 @onready var timer: Timer = $Timer
 
@@ -48,9 +51,9 @@ func reset_paw():
 
 func move_paw():
 	var i = randi_range(0, 1)
-	if i == 0:
+	if i == 0 && fish_is_in:
 		player_position = fish.global_position
-	else:
+	elif i == 1 && duck_is_in:
 		player_position = duck.global_position
 	cat_paw.global_position = player_position
 	cat_paw.global_position.y -= spawn_distance_from_player
@@ -60,9 +63,17 @@ func move_paw():
 
 func _on_cat_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("fish") || body.is_in_group("duck"):
+		if body.is_in_group("fish"):
+			fish_is_in = true
+		else:
+			duck_is_in = true
 		move_paw()
 
 
 func _on_cat_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group("fish") || body.is_in_group("duck"):
+		if body.is_in_group("fish"):
+			fish_is_in = false
+		else:
+			duck_is_in = false
 		reset_paw()
