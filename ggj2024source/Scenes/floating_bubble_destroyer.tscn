@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cskj4ymaj7c0l"]
+
+[ext_resource type="Script" path="res://Scripts/Floating/floatable_body_2d.gd" id="1_8alpo"]
+[ext_resource type="Texture2D" uid="uid://d3h1suvr8rshr" path="res://Art/bathroom/sponge.png" id="2_of8w7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6gun"]
+size = Vector2(367, 235)
+
+[node name="FloatingBubbleDestoyer" type="RigidBody2D" groups=["bubble_destoyer"]]
+position = Vector2(9, -117)
+script = ExtResource("1_8alpo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.734894, -0.734924)
+shape = SubResource("RectangleShape2D_x6gun")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-9.23489, 13.7651)
+rotation = 0.425338
+scale = Vector2(0.733752, 0.733752)
+texture = ExtResource("2_of8w7")

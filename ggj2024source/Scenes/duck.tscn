@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b5spf2dn1ciu7"]
+[gd_scene load_steps=10 format=3 uid="uid://d1nee1knmbq45"]
 
 [ext_resource type="Script" path="res://Scripts/duck.gd" id="1_qokuw"]
 [ext_resource type="Texture2D" uid="uid://cghamlyk4iobk" path="res://Art/duck/Bub_1.png" id="2_nq0mo"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://chn8d1xaasqte" path="res://Art/duck/Bub_6.png" id="7_hjmgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_86elp"]
-size = Vector2(14.5304, 36.6181)
+size = Vector2(54.9998, 140.693)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_006kl"]
 animations = [{
@@ -37,20 +37,23 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Duck" type="RigidBody2D"]
+[node name="Duck" type="RigidBody2D" groups=["duck"]]
 collision_layer = 3
 collision_mask = 3
-mass = 0.2
+mass = 2.0
 lock_rotation = true
 script = ExtResource("1_qokuw")
+jump_potential = 10000
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-46, -59)
+position = Vector2(-0.279991, -66.2848)
 rotation = 3.14159
-scale = Vector2(40.4666, 18.6793)
+scale = Vector2(2, 0.924)
 shape = SubResource("RectangleShape2D_86elp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(10.72, -59.0973)
+scale = Vector2(0.210813, 0.211305)
 sprite_frames = SubResource("SpriteFrames_006kl")
 autoplay = "default"
 frame = 2

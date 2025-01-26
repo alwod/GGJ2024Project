@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dh7me2uwra5te"]
+
+[ext_resource type="Texture2D" uid="uid://6kr8qntjkxsn" path="res://Art/bath.png" id="1_6at55"]
+[ext_resource type="PackedScene" uid="uid://u2or4d8medwc" path="res://Scenes/floating_object.tscn" id="2_ks1pr"]
+[ext_resource type="PackedScene" uid="uid://bpr51htjut4js" path="res://Scenes/water.tscn" id="3_n4kvt"]
+[ext_resource type="PackedScene" uid="uid://dprtvh6v4tbjh" path="res://Fish/fish.tscn" id="4_ua15m"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(571, 92)
+scale = Vector2(2.06875, 2.27187)
+texture = ExtResource("1_6at55")
+
+[node name="FloatingObject" parent="." instance=ExtResource("2_ks1pr")]
+position = Vector2(728, -301)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(607, -98)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Water" parent="." instance=ExtResource("3_n4kvt")]
+position = Vector2(-485, -110)
+scale = Vector2(1.72, 1)
+
+[node name="Fish" parent="." instance=ExtResource("4_ua15m")]
+max_speed = 350
+friction = 200

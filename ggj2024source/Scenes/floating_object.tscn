@@ -3,20 +3,20 @@
 [ext_resource type="Script" path="res://Scripts/Floating/floatable_body_2d.gd" id="1_7e258"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6gun"]
-size = Vector2(424, 399)
+size = Vector2(1104.19, 1003.39)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sg61p"]
 
-[node name="FloatingObject" type="RigidBody2D" groups=["bubbleable"]]
+[node name="FloatingObject" type="RigidBody2D"]
 script = ExtResource("1_7e258")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3.8147e-06, -0.499996)
-scale = Vector2(1, 1)
+position = Vector2(5.57775, -107.711)
+scale = Vector2(0.21826, 0.21826)
 shape = SubResource("RectangleShape2D_x6gun")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.991392, 0.374572, 0.545636, 1)
-position = Vector2(7.62939e-06, -3)
-scale = Vector2(428.385, 404.658)
+position = Vector2(6, -107)
+scale = Vector2(-235.604, -209.229)
 texture = SubResource("PlaceholderTexture2D_sg61p")
