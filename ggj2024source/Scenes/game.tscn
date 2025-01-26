@@ -17,8 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://g7vnpycvryao" path="res://Art/bathroom/boat.png" id="9_nybm4"]
 [ext_resource type="Texture2D" uid="uid://1ndpnb8kq86t" path="res://Art/bathroom/sponge.png" id="9_sluua"]
 [ext_resource type="PackedScene" uid="uid://d2etyhfvt5fgr" path="res://Scenes/wall.tscn" id="10_xsesx"]
-[ext_resource type="PackedScene" uid="uid://bs526o11vwoem" path="res://Scenes/floating_object2.tscn" id="11_6a8nn"]
 [ext_resource type="PackedScene" uid="uid://urc28gjxlce5" path="res://Drain/drain.tscn" id="12_oj41i"]
+[ext_resource type="PackedScene" uid="uid://bs526o11vwoem" path="res://Scenes/floating_object2.tscn" id="11_6a8nn"]
 [ext_resource type="PackedScene" uid="uid://rpa5gadfh2jr" path="res://Scenes/duck2.tscn" id="16_n5tly"]
 [ext_resource type="PackedScene" uid="uid://gu63e0fee7jj" path="res://Scenes/cat.tscn" id="19_61lxv"]
 [ext_resource type="PackedScene" uid="uid://d11gw2b4uir1a" path="res://Scenes/world_border.tscn" id="19_evjx5"]
@@ -935,7 +935,7 @@ rotation = -1.5708
 
 [node name="Audio" type="Node" parent="."]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio"]
+[node name="Bgm1" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("7_beach")
 autoplay = true
 bus = &"BGM1"

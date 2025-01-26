@@ -1,10 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://rpa5gadfh2jr"]
+[gd_scene load_steps=7 format=3 uid="uid://b47eykl4pekws"]
 
 [ext_resource type="Script" path="res://Scripts/duck_2.gd" id="1_vr8fi"]
 [ext_resource type="SpriteFrames" uid="uid://bok3vd63yqvvh" path="res://Art/animation frames/duck2.tres" id="2_onx83"]
+[ext_resource type="AudioStream" uid="uid://dhsr1x27ev55q" path="res://Audio/Splash.wav" id="3_1hvna"]
+[ext_resource type="AudioStream" uid="uid://2hgnxbmcnnfd" path="res://Audio/squeak.wav" id="4_v5e71"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_86elp"]
 size = Vector2(54.9998, 140.693)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_474ta"]
+random_pitch = 1.1
+random_volume_offset_db = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("3_1hvna")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_lal6f"]
+random_pitch = 1.1
+random_volume_offset_db = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("4_v5e71")
 
 [node name="Duck" type="CharacterBody2D" groups=["duck"]]
 collision_layer = 7
@@ -24,3 +38,13 @@ sprite_frames = ExtResource("2_onx83")
 autoplay = "default"
 frame = 2
 frame_progress = 0.52133
+
+[node name="DuckMove" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_474ta")
+bus = &"DuckMove"
+playback_type = 1
+
+[node name="Squeak" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_lal6f")
+bus = &"Squeak"
+playback_type = 1
