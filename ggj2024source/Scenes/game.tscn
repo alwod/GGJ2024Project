@@ -263,7 +263,7 @@ move_speed = 2000
 jump_potential = 10
 
 [node name="Fish" parent="Players" groups=["bubbleable"] instance=ExtResource("7_3380c")]
-position = Vector2(1569, 139)
+position = Vector2(1797, -2)
 scale = Vector2(1.016, 1)
 max_speed = 1000
 acceleration = 4000
