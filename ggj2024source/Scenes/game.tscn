@@ -369,7 +369,7 @@ rotation = 15.7136
 scale = Vector2(0.485468, 0.485468)
 
 [node name="Wall118" parent="Walls" instance=ExtResource("10_xsesx")]
-position = Vector2(19505, -683)
+position = Vector2(19518, -655)
 rotation = 18.8531
 scale = Vector2(0.485468, 0.485468)
 
@@ -891,7 +891,7 @@ spawn_delay = 0.4
 [node name="Water" parent="." instance=ExtResource("1_fb3qe")]
 modulate = Color(1, 1, 1, 0.682353)
 z_index = 1
-position = Vector2(1098, -33)
+position = Vector2(1098, -35)
 scale = Vector2(2.157, 1.205)
 collision_mask = 7
 
