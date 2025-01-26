@@ -35,12 +35,12 @@ acceleration = 4500
 friction = 200
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3.39, -60.6964)
+position = Vector2(4.39, -68.6964)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_htts3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(8.88999, -69.1964)
+position = Vector2(9.88999, -77.1964)
 scale = Vector2(0.182703, 0.211066)
 sprite_frames = SubResource("SpriteFrames_8r0h1")
 animation = &"move"

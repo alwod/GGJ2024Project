@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 @export var push_force = 1500
 
-var water_surface_y_level = 0
+@export var water_surface_y_level = 0
 @export var force_out_of_water = 5
 
 var input = Vector2.ZERO
