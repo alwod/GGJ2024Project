@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b5yh1n0snkwwh"]
+[gd_scene load_steps=15 format=3 uid="uid://b5yh1n0snkwwh"]
 
 [ext_resource type="Texture2D" uid="uid://6kr8qntjkxsn" path="res://Art/bath.png" id="1_642da"]
 [ext_resource type="Texture2D" uid="uid://dmhuiln1x2pul" path="res://Art/bathroom/wall.png" id="1_cnihc"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://d2etyhfvt5fgr" path="res://Scenes/wall.tscn" id="10_xsesx"]
 [ext_resource type="PackedScene" uid="uid://urc28gjxlce5" path="res://Drain/drain.tscn" id="12_oj41i"]
 [ext_resource type="PackedScene" uid="uid://gu63e0fee7jj" path="res://Scenes/cat.tscn" id="14_6tbas"]
-[ext_resource type="PackedScene" uid="uid://dqu43qab07ej3" path="res://Scenes/cat_paw.tscn" id="15_b62my"]
 
 [node name="Game" type="Node2D"]
 
@@ -192,6 +191,5 @@ bus = &"BGM1"
 playback_type = 1
 
 [node name="Cat" parent="." instance=ExtResource("14_6tbas")]
-position = Vector2(4170, -34)
-scale = Vector2(14.33, 14.33)
-paw_scene = ExtResource("15_b62my")
+position = Vector2(3277, 630)
+scale = Vector2(11.39, 11.39)

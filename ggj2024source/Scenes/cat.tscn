@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://gu63e0fee7jj"]
+[gd_scene load_steps=4 format=3 uid="uid://gu63e0fee7jj"]
 
 [ext_resource type="Script" path="res://Scripts/cat.gd" id="1_1x0yu"]
+[ext_resource type="PackedScene" uid="uid://dqu43qab07ej3" path="res://Scenes/cat_paw.tscn" id="2_i8p6f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yb67y"]
 size = Vector2(196.5, 164)
@@ -9,9 +10,20 @@ size = Vector2(196.5, 164)
 script = ExtResource("1_1x0yu")
 
 [node name="CatArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CatArea"]
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_yb67y")
 
+[node name="CatPaw" parent="." instance=ExtResource("2_i8p6f")]
+position = Vector2(22, -404)
+scale = Vector2(0.25, 0.25)
+script = null
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.437
+
 [connection signal="body_entered" from="CatArea" to="." method="_on_cat_area_body_entered"]
+[connection signal="body_exited" from="CatArea" to="." method="_on_cat_area_body_exited"]
