@@ -57,7 +57,6 @@ func _on_skip_button_pressed():
 
 func _ready() -> void:
 	display_next_dialogue()
-	$CutsceneMusic.play()
 
 
 func _input(event: InputEvent) -> void:
@@ -84,10 +83,10 @@ func display_next_dialogue() -> void:
 
 	if currentDialogue["character"] == "Bub":
 		duckNode.play()
-		$DuckTalk.play()
+		fishNode.stop()
 	else:
+		duckNode.stop()
 		fishNode.play()
-		$FishTalk.play()
 
 	var text: String = ""
 
